@@ -29,7 +29,7 @@ export default (configEnv: ConfigEnv) => {
 
     return defineConfig({
         // 设置打包路径
-        base: mode === 'development' ? '/' : `/${title}/`,
+        base: '/',
         // 插件
         plugins: [
             vue({

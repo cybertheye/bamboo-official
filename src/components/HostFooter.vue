@@ -19,7 +19,7 @@
             </div>
             <div class="company-info-filed">
                 <div class="label">{{ t('common.email') }}</div>
-                <div class="text">{{ t('company.email') }}</div>
+                <div class="text">sales@fanbearinghousing.com</div>
             </div>
         </div>
         <div class="company-email-edit">

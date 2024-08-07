@@ -1,0 +1,83 @@
+<template>
+    <div class="introduce-container">
+        <div :class="isZh ? 'introduce-text introduce-text-zh' : 'introduce-text' ">
+            <div class="title-text">{{ t('introduce.title') }}</div>
+            <div class="content-text">
+                <div class="content-span">{{ t('introduce.content1') }}</div>
+                <div class="content-span">{{ t('introduce.content2') }}</div>
+                <div class="content-span">{{ t('introduce.content3') }}</div>
+            </div>
+        </div>
+        <div class="introduce-img">
+            <img src="@/assets/images/introduce/factory.png" alt="工厂图片">
+        </div>
+    </div>
+</template>
+
+<script lang="ts" setup>
+import { useI18n } from 'vue-i18n';
+import type { MessageSchema } from '../i18n/message_schema'
+const { t, locale } = useI18n<{ message: MessageSchema, locale: 'zh' | 'en' }>();
+const isZh = computed(() => locale.value == 'zh');
+
+
+
+</script>
+
+<style scoped>
+.introduce-container {
+    height: 837px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    .introduce-text {
+        margin-top: 150px;
+        flex: 930;
+        padding-left: 124px;
+        .title-text {
+            color: var(--title);
+            font-weight: bolder;
+            height: 52px;
+            position: relative;
+            font-size: 28px;
+            line-height: 33px;
+            margin-bottom: 60px;
+        }
+        .title-text::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 4px;
+            background-color: var(--title);
+            width: 60px;
+        }
+        .content-text {
+            font-size: 20px;
+            color: var(--body);
+            line-height: 24px;
+        }
+        .content-span {
+            margin-bottom: 34px;
+        }
+    }
+    .introduce-text-zh {
+        padding-right: 80px;
+    }
+    .introduce-img {
+        flex: 990;
+        height: 100%;
+        position: relative;
+        img {
+            width: 1019px;
+            position: absolute;
+            bottom: 76px;
+            right: 0;
+            object-fit: contain;
+        }
+
+    }
+
+}
+</style>

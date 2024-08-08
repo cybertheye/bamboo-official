@@ -3,7 +3,7 @@
 # 需要进入包含这个dist文件夹的目录并运行
 # docker build -t unicorn .
 # docker run -d -p 80:80 -p 443:443 unicorn
-
+# docker run -d -p 80:80 unicorn
 # 用nginx镜像构建
 FROM nginx:alpine
 
@@ -15,7 +15,7 @@ COPY ./ssl /etc/nginx/ssl
 
 # 添加nginx配置,暴露80端口
 EXPOSE 80
-EXPOSE 443
+# EXPOSE 443
 
 # 覆盖nginx默认配置
 COPY nginx.conf /etc/nginx/conf.d/default.conf

@@ -1,9 +1,9 @@
 <template>
     <div class="certificate-container">
         <div class="cert-imgs">
-            <img src="@/assets/images/introduce/cert1.jpg">
-            <img src="@/assets/images/introduce/cert2.jpg">
-            <img src="@/assets/images/introduce/cert3.jpg">
+            <img class="cert-img" src="@/assets/images/introduce/cert1.jpg">
+            <img class="cert-img" src="@/assets/images/introduce/cert2.jpg">
+            <img class="cert-img" src="@/assets/images/introduce/cert3.jpg">
         </div>
         <div class="cert-text">
             <div class="title-container">
@@ -17,7 +17,7 @@
         </div>
 
         <div class="tag">
-            <img src="@/assets/images/introduce/design_cert_sign.png" alt="水印">
+            <img class="tag-img" src="@/assets/images/introduce/design_cert_sign.png" alt="水印">
         </div>
     </div>
 </template>
@@ -46,7 +46,7 @@ const isZh = computed(() => locale.value == 'zh');
         position: absolute;
         top: 155px;
         left: 0;
-        img {
+        .tag-img {
             height: 169px;
             width: 1087px;
             object-fit: contain;
@@ -63,7 +63,7 @@ const isZh = computed(() => locale.value == 'zh');
         padding: 0 124px;
         margin-top: 276px;
 
-        img {
+        .cert-img {
             flex: 1;
             width: 100%;
             height: 476px;

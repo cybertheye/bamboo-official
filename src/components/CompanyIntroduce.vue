@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="introduce-img">
-            <img src="@/assets/images/introduce/factory.png" alt="工厂图片">
+            <img class="factory-img" src="@/assets/images/introduce/factory.png" alt="工厂图片">
         </div>
     </div>
 </template>
@@ -69,12 +69,13 @@ const isZh = computed(() => locale.value == 'zh');
         flex: 990;
         height: 100%;
         position: relative;
-        img {
-            width: 1019px;
+        .factory-img {
             position: absolute;
+            width: 1019px;
             bottom: 76px;
             right: 0;
             object-fit: contain;
+            -o-object-fit: contain;
         }
 
     }

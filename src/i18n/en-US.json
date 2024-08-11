@@ -1,13 +1,16 @@
 {
     "common": {
-        "joinUs": "Join us",
+        "aboutUs": "About us",
+        "interest": "Interested",
         "companyName": "Name",
         "address": "Address",
-        "phone": "Telephone",
+        "phone": "Phone number",
         "email": "E-mail",
         "send": "send",
         "emailPlaceholder": "Please edit your email...",
-        "addWechat": "Add wecaht"
+        "emailTitlePlaceholder": "Inquire and make friends…",
+        "addWechat": "Add wechat",
+        "wechat": "Wechat"
     },
     "company": {
         "name": "Taizhou Unicorn Electromechanical Co., Ltd",
@@ -16,15 +19,15 @@
     },
     "product": {
         "titleUppercase": "HIGH ACCURACY, NO LEAKAGE",
-        "high": "High",
-        "accuracy": "accuracy",
-        "no": "No",
-        "leakage": "leakage",
-        "best": "Best",
-        "quality": "Quality"
+        "high": "HIGH",
+        "accuracy": "ACCURACY",
+        "no": "NO",
+        "leakage": "LEAKAGE",
+        "best": "SUPPORT",
+        "quality": "CUSTOMIZING"
     },
     "tech": {
-        "title": "MAIN PROCESSING TECHNOLOGY",
+        "title": "MAIN PROCESSING",
         "process1": "BOX PROCESSING",
         "process1Html": "In order to <span class='highlight'>ensure </span><span class='highlight'>accuracy</span>, all boxes are finished using <span class='highlight'>a </span><span class='highlight'>horizontal </span><span class='highlight'>machining </span><span class='highlight'>center.</span> After processing, the concentricity of each box is measured, as well as the bearing position tolerance, and <span class='highlight'>the </span> <span class='highlight'>defective </span> <span class='highlight'>products </span> <span class='highlight'>are </span> <span class='highlight'>eliminated.</span>",
         "process2": "AIR TIGHTNESS TEST",
@@ -36,6 +39,7 @@
         "process5": "INTEGRAL ASSEMBLY"
     },
     "series": {
+        "title": "CURRENT PRODUCT LINE",
         "series1": "H series water cooling",
         "series2": "H series oil cooling",
         "series3": "GH series water cooling",

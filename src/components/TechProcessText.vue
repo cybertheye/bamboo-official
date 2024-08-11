@@ -33,17 +33,19 @@ const props = defineProps<{ title: string, bodyHtml?: string, alignmentLeft: boo
         line-height: 28px;
         .highlight {
             position: relative;
+            color: var(--primary);
+            font-weight: bold;
         }
-        .highlight::after {
-            content: "";
-            position: absolute;
-            height: 11px;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: var(--primary);
-            opacity: 0.2;
-        }
+        //.highlight::after {
+        //    content: "";
+        //    position: absolute;
+        //    height: 11px;
+        //    left: 0;
+        //    right: 0;
+        //    bottom: 0;
+        //    background-color: var(--primary);
+        //    opacity: 0.2;
+        //}
     }
 
 

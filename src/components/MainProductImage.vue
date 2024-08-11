@@ -60,8 +60,10 @@ const isZh = computed(() => locale.value == 'zh');
         display: flex;
         flex-direction: column;
         justify-content: start;
+        align-items: end;
+        padding-right: 165px;
         .product-img {
-            height: 618px;
+            height: 489px;
             margin-top: 137px;
             object-fit: contain;
         }
@@ -70,7 +72,7 @@ const isZh = computed(() => locale.value == 'zh');
     .product-text {
         display: flex;
         width: 898px;
-        padding-left: 124px;
+        padding-left: 240px;
         flex-direction: column;
         .title-zh-text {
             font-size: 20px;

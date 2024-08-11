@@ -1,5 +1,9 @@
 <template>
     <div class="series-banner-container">
+        <div class="title-text">
+            <span>{{ t('series.title') }}</span>
+            <div class="bottom-border"></div>
+        </div>
         <div class="series-banner">
             <div v-for="(item, index) in seriesProductData" class="series-banner-item" @click="onBannerItemClick(index)">
                 <img class="border-img stack-child" src="@/assets/images/background/series_border.png" alt="边框">
@@ -32,11 +36,41 @@ const onBannerItemClick = (index: number) => {
     height: 578px;
     padding-bottom: 78px;
     background: #f7f7f7;
+
+    .title-text {
+        font-weight: 600;
+        font-size: 28px;
+        color: #333333;
+        line-height: 33px;
+        text-align: center;
+        font-style: normal;
+        text-transform: none;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        span {
+            position: relative;
+            padding-bottom: 18px;
+        }
+        span::after {
+            content: "";
+            height: 4px;
+            position: absolute;
+            background-color: var(--title-1);
+            bottom: 0;
+            left: 40px;
+            right: 40px;
+        }
+
+    }
+
     .series-banner {
         width: 100%;
         display: flex;
         justify-content: center;
         overflow-x: scroll;
+        margin-top: 67px;
         .series-banner-item {
             height: 500px;
             width: 440px;

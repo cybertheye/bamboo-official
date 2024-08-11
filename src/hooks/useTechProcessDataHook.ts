@@ -4,10 +4,12 @@ import type { MessageSchema } from "@/i18n/message_schema";
 
 export class  TechProcessPreviewMediaModel {
     img: string;
+    enImg: string | null;
     video: string | null;
 
-    constructor(img: string, video: string | null) {
+    constructor(img: string, video: string | null, enImg: string | null) {
         this.img = img;
+        this.enImg = enImg;
         this.video = video;
     }
 }
@@ -48,28 +50,29 @@ export class TechProcessPreviewModel {
 }
 export const useTechProcessDataHook = () => {
 
-    const { t, locale } = useI18n<{ message: MessageSchema }>();
+    const { t, locale } = useI18n<{ message: MessageSchema, locale: 'zh' | 'en' }>();
+    const isZh = computed(() => locale.value == 'zh');
 
 
     const techProcessData =  computed(() => [
         new TechProcessPreviewModel(t('tech.process1'), t('tech.process1Html'),  new URL('@/assets/images/icons/step1.png', import.meta.url).href, true, false, false, [
-            new TechProcessPreviewMediaModel('video_01.jpg', '01.mp4'),
-            new TechProcessPreviewMediaModel('01.png', null),
-            new TechProcessPreviewMediaModel('02.png', null),
-            new TechProcessPreviewMediaModel('03.png', null),
+            new TechProcessPreviewMediaModel('video_01.jpg', '01.mp4', null),
+            new TechProcessPreviewMediaModel('01.png', null, null),
+            new TechProcessPreviewMediaModel('02.png', null,null),
+            new TechProcessPreviewMediaModel('03.png', null,null),
         ]),
         new TechProcessPreviewModel(t('tech.process2'), t('tech.process2Html'),  new URL('@/assets/images/icons/step2.png', import.meta.url).href, false, false, true, [
-            new TechProcessPreviewMediaModel('video_02.jpg', '02.mp4'),
-            new TechProcessPreviewMediaModel('video_03.jpg', '03.mp4'),
+            new TechProcessPreviewMediaModel('video_02.jpg', '02.mp4', null),
+            new TechProcessPreviewMediaModel('video_03.jpg', '03.mp4', null),
         ]),
         new TechProcessPreviewModel(t('tech.process3'), t('tech.process3Html'),  new URL('@/assets/images/icons/step3.png', import.meta.url).href, false, false, false, [
-            new TechProcessPreviewMediaModel('04.png', null),
+            new TechProcessPreviewMediaModel('04.png', null, '04_en.png'),
         ]),
         new TechProcessPreviewModel(t('tech.process4'), t('tech.process4Html'),  new URL('@/assets/images/icons/step4.png', import.meta.url).href, false, false, true,  [
-            new TechProcessPreviewMediaModel('video_04.jpg', '04.mp4'),
+            new TechProcessPreviewMediaModel('video_04.jpg', '04.mp4', null),
         ]),
         new TechProcessPreviewModel(t('tech.process5'), undefined,  new URL('@/assets/images/icons/step5.png', import.meta.url).href, false, true, false, [
-            new TechProcessPreviewMediaModel('05.jpg', null),
+            new TechProcessPreviewMediaModel('05.jpg', null, null),
         ]),
     ]);
 

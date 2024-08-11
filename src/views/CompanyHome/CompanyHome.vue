@@ -42,13 +42,13 @@ const { techProcessData } = useTechProcessDataHook();
         align-items: center;
         background-color: #f7f7f7;
         padding-top: 60px;
-        padding-bottom: 80px;
+        padding-bottom: 60px;
         .timeline-title {
             font-size: 28px;
             line-height: 33px;
             text-align: center;
             font-weight: bolder;
-            margin-bottom: 82px;
+            margin-bottom: 44px;
             position: relative;
             color:  var(--title);
         }

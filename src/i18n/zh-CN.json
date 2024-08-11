@@ -1,13 +1,16 @@
 {
     "common": {
-        "joinUs": "加入我们",
+        "aboutUs": "关于我们",
+        "interest": "感兴趣",
         "companyName": "公司名称",
         "address": "公司地址",
         "phone": "公司电话",
         "email": "公司邮箱",
         "send": "发送",
         "emailPlaceholder": "请编辑您的电子邮件…",
-        "addWechat": "添加微信"
+        "addWechat": "添加微信",
+        "emailTitlePlaceholder": "询问并结交朋友…",
+        "wechat": "公司微信"
     },
     "company": {
         "name": "台州斑驳机电有限公司",
@@ -20,8 +23,8 @@
         "accuracy": "精度",
         "no": "不",
         "leakage": "泄漏",
-        "best": "最好的",
-        "quality": "质量"
+        "best": "支持",
+        "quality": "自定义"
     },
     "tech": {
         "title": "主要加工工艺",
@@ -36,6 +39,7 @@
         "process5": "整体组装"
     },
     "series": {
+        "title": "现有产品线",
         "series1": "H系列水冷",
         "series2": "H系列油冷",
         "series3": "GH系列水冷",

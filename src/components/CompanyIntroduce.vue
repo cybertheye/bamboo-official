@@ -8,6 +8,7 @@
                 <div class="content-span">{{ t('introduce.content3') }}</div>
             </div>
         </div>
+        <div class="row-space"></div>
         <div class="introduce-img">
             <img class="factory-img" src="@/assets/images/introduce/factory.png" alt="工厂图片">
         </div>
@@ -26,15 +27,15 @@ const isZh = computed(() => locale.value == 'zh');
 
 <style scoped>
 .introduce-container {
-    height: 837px;
+    height: 881px;
     display: flex;
     flex-direction: row;
     align-items: start;
-    justify-content: center;
+    justify-content: start;
     .introduce-text {
         margin-top: 150px;
-        flex: 930;
-        padding-left: 124px;
+        flex: 968;
+        padding-left: 240px;
         .title-text {
             color: var(--title);
             font-weight: bolder;
@@ -65,15 +66,19 @@ const isZh = computed(() => locale.value == 'zh');
     .introduce-text-zh {
         padding-right: 80px;
     }
+    .row-space {
+        width: 40px;
+    }
     .introduce-img {
-        flex: 990;
+        flex: 912;
         height: 100%;
+        padding-right: 240px;
         position: relative;
         .factory-img {
             position: absolute;
-            width: 1019px;
-            bottom: 76px;
-            right: 0;
+            width: 672px;
+            top: 136px;
+            left: 0;
             object-fit: contain;
             -o-object-fit: contain;
         }

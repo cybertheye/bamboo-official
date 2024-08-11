@@ -4,13 +4,11 @@
             <TechProcessText v-if="model.textAlignmentStart" :title="props.model.title" :body-html="props.model.content" :alignment-left="true" ></TechProcessText>
             <TechVideoIntroduce v-else :model="model"></TechVideoIntroduce>
         </div>
-
         <div class="step-container">
             <div :class="model.isFirst ? 'divider hidden' : 'divider' "></div>
             <img class="step-img" :src="model.stepSrc" alt="步骤">
             <div :class="model.isLast ? 'divider hidden' : 'divider'"></div>
         </div>
-
         <div class="preview-right">
             <TechProcessText v-if="!model.textAlignmentStart" :title="props.model.title" :body-html="props.model.content" :alignment-left="false" ></TechProcessText>
             <TechVideoIntroduce v-else :model="model"></TechVideoIntroduce>
@@ -28,10 +26,6 @@ import type { TechProcessPreviewModel } from '@/hooks/useTechProcessDataHook';
 import TechProcessText from "@/components/TechProcessText.vue";
 import TechVideoIntroduce from "@/components/TechVideoIntroduce.vue";
 const props = defineProps<{ model: TechProcessPreviewModel }>();
-
-console.log('alignment start ---');
-console.log(props.model.textAlignmentStart);
-
 </script>
 
 <style scoped lang="scss">
@@ -46,7 +40,7 @@ console.log(props.model.textAlignmentStart);
     .step-container {
         display: flex;
         flex-direction: column;
-        height: 487px;
+        height: 485px;
         align-items: center;
         margin: 1px 40px;
         .step-img {
@@ -73,7 +67,7 @@ console.log(props.model.textAlignmentStart);
     .preview-left {
         flex: 1;
         width: 200px;
-        height: 447px;
+        height: 365px;
     }
 
     .preview-right {

@@ -1,9 +1,7 @@
 <template>
     <div class="certificate-container">
         <div class="cert-imgs">
-            <img class="cert-img" src="@/assets/images/introduce/cert1.jpg">
-            <img class="cert-img" src="@/assets/images/introduce/cert2.jpg">
-            <img class="cert-img" src="@/assets/images/introduce/cert3.jpg">
+            <img v-for="(img, index) in images" class="cert-img" :src="img" @click="onBannerItemClick(index)" alt="证书">
         </div>
         <div class="cert-text">
             <div class="title-container">
@@ -19,6 +17,14 @@
         <div class="tag">
             <img class="tag-img" src="@/assets/images/introduce/design_cert_sign.png" alt="水印">
         </div>
+
+        <vue-easy-lightbox
+            :visible="visible"
+            :imgs="images"
+            :index="selectedIndexRef"
+            @hide="onPreviewClose"
+        />
+
     </div>
 </template>
 
@@ -27,6 +33,23 @@ import { useI18n } from 'vue-i18n';
 import type { MessageSchema } from '../i18n/message_schema'
 const { t, locale } = useI18n<{ message: MessageSchema, locale: 'zh' | 'en' }>();
 const isZh = computed(() => locale.value == 'zh');
+const selectedIndexRef = ref(0);
+const onBannerItemClick = (index: number) => {
+    selectedIndexRef.value = index;
+    visible.value = true;
+}
+
+const visible = ref(false)
+
+const onPreviewClose = () => {
+    visible.value =  false;
+}
+
+const images = [
+    new URL('@/assets/images/introduce/cert1.jpg', import.meta.url).href,
+    new URL('@/assets/images/introduce/cert2.jpg', import.meta.url).href,
+    new URL('@/assets/images/introduce/cert3.jpg', import.meta.url).href,
+]
 
 
 

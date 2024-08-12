@@ -1,6 +1,7 @@
 <template>
     <div class="hots-header">
         <img id="logo" src="../assets/images/logo.jpg" alt="logo" @click="onLogoClick">
+        <img class="title" :src="getImageImport(isZh ? 'title.png' : 'title_en.png')" />
         <div class="space"></div>
         <img id="exchange-language" :src="getImageImport(isZh ? 'language_zh.png' : 'language_en.png')" @click="onExchangeLanguageClick">
         <div id="join-us" @click="onJoinUsClick">{{ t('common.aboutUs')  }}</div>
@@ -61,6 +62,12 @@ const onExchangeLanguageClick = () => {
         height: 127px;
         cursor: pointer;
         user-select: none;
+    }
+
+    .title {
+        height: 24px;
+        width: 576px;
+        margin-left: 60px;
     }
 
     #exchange-language {

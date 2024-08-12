@@ -8,9 +8,9 @@
                 <div class="content-span">{{ t('introduce.content3') }}</div>
             </div>
         </div>
-        <div class="row-space"></div>
         <div class="introduce-img">
             <img class="factory-img" src="@/assets/images/introduce/factory.png" alt="工厂图片">
+            <img class="about-us-img" src="@/assets/images/introduce/about_us.png" alt="关于我们">
         </div>
     </div>
 </template>
@@ -25,7 +25,7 @@ const isZh = computed(() => locale.value == 'zh');
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .introduce-container {
     height: 881px;
     display: flex;
@@ -63,9 +63,6 @@ const isZh = computed(() => locale.value == 'zh');
             margin-bottom: 34px;
         }
     }
-    .introduce-text-zh {
-        padding-right: 80px;
-    }
     .row-space {
         width: 40px;
     }
@@ -77,8 +74,19 @@ const isZh = computed(() => locale.value == 'zh');
         .factory-img {
             position: absolute;
             width: 672px;
-            top: 136px;
+            top: 178px;
             left: 0;
+            object-fit: contain;
+            -o-object-fit: contain;
+        }
+
+        .about-us-img {
+            position: absolute;
+            bottom: 178px;
+            height: 169px;
+            width: 736px;
+            top: 614px;
+            right: 0;
             object-fit: contain;
             -o-object-fit: contain;
         }

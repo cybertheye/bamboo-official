@@ -1,21 +1,28 @@
 <template>
     <div class="certificate-container">
-        <div class="cert-imgs">
-            <img v-for="(img, index) in images" class="cert-img" :src="img" @click="onBannerItemClick(index)" alt="证书">
-        </div>
         <div class="cert-text">
             <div class="title-container">
                 <span class="title-text">{{ t('cert.title')}}</span>
             </div>
+            <div class="sub-title-text">{{ t('cert.subTitle')}}</div>
+        </div>
+
+        <div class="cert-gallery-container">
+            <div class="cert-images-container">
+                <div class="cert-img-container">
+                    <img v-for="(img, index) in images" class="cert-img" :src="img" @click="onBannerItemClick(index)" alt="证书">
+                </div>
+            </div>
+            <div class="dash-line"></div>
             <div class="cert-name-list">
                 <div class="name-text">{{ t('cert.cert1')}}</div>
                 <div class="name-text">{{ t('cert.cert2')}}</div>
                 <div class="name-text">{{ t('cert.cert3')}}</div>
             </div>
-        </div>
 
-        <div class="tag">
-            <img class="tag-img" src="@/assets/images/introduce/design_cert_sign.png" alt="水印">
+            <div class="tag">
+                <img class="tag-img" src="@/assets/images/introduce/design_cert_sign.png" alt="水印">
+            </div>
         </div>
 
         <vue-easy-lightbox
@@ -46,58 +53,28 @@ const onPreviewClose = () => {
 }
 
 const images = [
-    new URL('@/assets/images/introduce/cert1.jpg', import.meta.url).href,
-    new URL('@/assets/images/introduce/cert2.jpg', import.meta.url).href,
-    new URL('@/assets/images/introduce/cert3.jpg', import.meta.url).href,
+    new URL('@/assets/images/introduce/cert1.png', import.meta.url).href,
+    new URL('@/assets/images/introduce/cert2.png', import.meta.url).href,
+    new URL('@/assets/images/introduce/cert3.png', import.meta.url).href,
 ]
-
 
 
 </script>
 
 <style scoped>
 .certificate-container {
-    height: 854px;
+    min-height: 996px;
     display: flex;
-    flex-direction: row;
-    align-items: start;
-    justify-content: center;
+    flex-direction: column;
     background-color: #f7f7f7;
     position: relative;
 
-    .tag {
-        position: absolute;
-        top: 155px;
-        left: 0;
-        .tag-img {
-            height: 169px;
-            width: 1087px;
-            object-fit: contain;
-        }
-
-    }
-
-    .cert-imgs {
-        flex: 1366;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 124px;
-        margin-top: 276px;
-
-        .cert-img {
-            flex: 1;
-            width: 100%;
-            height: 476px;
-            object-fit: contain;
-        }
-    }
-
     .cert-text {
-        flex: 554;
         height: 100%;
         padding-right: 124px;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
         .title-container {
             display: flex;
             flex-direction: row;
@@ -123,14 +100,53 @@ const images = [
             background-color: var(--title);
         }
 
+        .sub-title-text {
+            max-width: 1440px;
+            margin-top: 40px;
+            text-align: right;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 23px;
+            color: var(--body);
+        }
+    }
+    .cert-gallery-container {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        .cert-images-container {
+            flex: 1282;
+            margin-top: 0;
+            width: 100%;
+            padding-left: 239px;
+            padding-top: 140px;
+            .cert-img-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: end;
+                align-items: center;
+                z-index: 999;
+                position: relative;
+                .cert-img {
+                    flex: 1;
+                    width: 100%;
+                    height: 476px;
+                    margin-left: 20px;
+                    object-fit: contain;
+                }
+            }
+        }
         .cert-name-list {
             display: flex;
             flex-direction: column;
             align-items: end;
-            height: 471px;
-            margin-top: 144px;
+            height: 100%;
+            margin-top: 20px;
             position: relative;
             justify-content: center;
+            flex: 638;
+            padding-right: 239px;
+            padding-top: 257px;
             .name-text {
                 padding-right: 24px;
                 line-height: 28px;
@@ -149,7 +165,6 @@ const images = [
                 background-color: #777777;
             }
         }
-
         .cert-name-list::after {
             position: absolute;
             content: "";
@@ -157,13 +172,16 @@ const images = [
             top: 0;
             bottom: 0;
             width: 2px;
-            background: repeating-linear-gradient(
-                to bottom,
-                #777777 0,
-                #777777 5px,
-                transparent 5px,
-                transparent 10px
-            );
+        }
+        .tag {
+            position: absolute;
+            top: 275px;
+            left: 0;
+            .tag-img {
+                height: 169px;
+                width: 1087px;
+                object-fit: contain;
+            }
         }
     }
 

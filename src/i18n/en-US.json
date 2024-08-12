@@ -1,7 +1,7 @@
 {
     "common": {
         "aboutUs": "About us",
-        "interest": "Interested",
+        "interest": "Feel Interested",
         "companyName": "Name",
         "address": "Address",
         "phone": "Phone number",
@@ -10,7 +10,8 @@
         "emailPlaceholder": "Please edit your email...",
         "emailTitlePlaceholder": "Inquire and make friends…",
         "addWechat": "Add wechat",
-        "wechat": "Wechat"
+        "wechat": "Wechat",
+        "clickDetail": "click for detail"
     },
     "company": {
         "name": "Taizhou Unicorn Electromechanical Co., Ltd",
@@ -48,12 +49,14 @@
     },
     "introduce": {
         "title": "CORPORATION",
+        "subTitle": "we make and only make fan bearing housing. ",
         "content1": "Taizhou Dot Barge Electromechanical Co., Ltd. is a professional production of fan bearing box enterprises, the company is located in the \"China pump town\" title of industrial strong town - Daxi town. For a long time, the company has devoted itself to research, with more professional technology, greater investment and continuous innovation to face the market competition. The company has always adhered to the \"quality of survival, science and technology and development\" business policy, the integrity of the business philosophy is the goal of Mottled electromechanical, the company developed a fuel-saving bearing box won the utility model patent certificate. ",
         "content2": "Our factory has established long-term and stable cooperative relations with a number of Taizhou companies, heavy credit, keep the contract, ensure product quality, and won the trust of our customers, the factory fully follow customer needs, and constantly carry out product innovation and service improvement. ",
         "content3": "In order to prolong the service life of the bearing box as much as possible, it is necessary to fill the mechanical oil inside the bearing to lubricate the bearing, but we found that the process of filling the oil is actually quite long, and the amount of oil used is also very large, so in this regard, our company developed a fuel-saving bearing box structure, and has applied for a utility patent. The technology is to change the structure of the box (add steps at the bottom of the box to lock the filled oil near the bearings at both ends; At the same time, increase the oil injection hole and move its position to both ends) to achieve the purpose of reducing the oil use and the oil injection time, and ultimately it is expected to reduce the oil use by 50% and the oil injection time by 75%."
     },
     "cert" : {
         "title": "QUALIFICATION CERTIFICATE",
+        "subTitle": "为了尽量延长轴承箱的使用寿命，需要在其内部加注机械油以润滑轴承，但我们发现，加注机油的过程其实相当漫长，且使用的机油量也很大，于是针对这一方面我司研发出了一种节油型的轴承箱构造，并已申请实用专利，该技术是通过改变箱体构造（在箱体底部增设台阶，将所加注的机油锁定在两端轴承附近；同时增加注油孔，将其位置移至两端），来达到减少机油使用量以及注油时间的目的，最终预计能减少50%的机油使用量和75%的注油时间。",
         "cert1": "Design Patent Certificate",
         "cert2": "Trademark Registration Certificate",
         "cert3": "Utility Model Patent Certificate"

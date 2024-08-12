@@ -2,7 +2,7 @@
     <div :class="props.model.textAlignmentStart ? 'preview-media-container' : 'preview-media-container preview-media-container-alignment-end' ">
         <div class="tabs">
             <div v-for="(item, index) in props.model.medias" :class="index == selectedIndexRef ? 'tab-item tab-item-active' : 'tab-item'" @click="onTabClick(index)" >
-                <img :src="getImageImport(isZh ? item.img : (item.enImg ?? item.img) )" alt="tab">
+                <img class="tab-img" :src="getImageImport(isZh ? item.img : (item.enImg ?? item.img) )" alt="tab">
                 <div class="tag" v-if="item.video">
                     <img class="video-tag" v-if="index == selectedIndexRef" src="@/assets/images/icons/video_orange.png" alt="tab-video-tag">
                     <img class="video-tag" v-else src="@/assets/images/icons/video_gray.png" alt="tab-video-tag">
@@ -61,7 +61,7 @@ const getVideoImport = (path: string) =>new URL(`../assets/videos/${path}`, impo
             margin-bottom: 15px;
             user-select: none;
             position: relative;
-            img {
+            .tab-img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
@@ -91,7 +91,7 @@ const getVideoImport = (path: string) =>new URL(`../assets/videos/${path}`, impo
         .preview-img {
             width: 504px;
             height: 365px;
-            object-fit: fill;
+            object-fit: contain;
         }
 
         .preview-video {

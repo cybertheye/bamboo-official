@@ -2,10 +2,11 @@
     <div class="introduce-container">
         <div :class="isZh ? 'introduce-text introduce-text-zh' : 'introduce-text' ">
             <div class="title-text">{{ t('introduce.title') }}</div>
+            <div class="sub-title-text">{{ t('introduce.subTitle') }}</div>
             <div class="content-text">
                 <div class="content-span">{{ t('introduce.content1') }}</div>
                 <div class="content-span">{{ t('introduce.content2') }}</div>
-                <div class="content-span">{{ t('introduce.content3') }}</div>
+<!--                <div class="content-span">{{ t('introduce.content3') }}</div>-->
             </div>
         </div>
         <div class="introduce-img">
@@ -27,7 +28,7 @@ const isZh = computed(() => locale.value == 'zh');
 
 <style lang="scss" scoped>
 .introduce-container {
-    height: 881px;
+    min-height: 881px;
     display: flex;
     flex-direction: row;
     align-items: start;
@@ -53,6 +54,12 @@ const isZh = computed(() => locale.value == 'zh');
             height: 4px;
             background-color: var(--title);
             width: 60px;
+        }
+        .sub-title-text {
+            font-weight: 500;
+            color: var(--title-1);
+            font-size: 26px;
+            margin-bottom: 34px;
         }
         .content-text {
             font-size: 20px;

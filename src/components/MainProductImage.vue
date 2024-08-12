@@ -12,20 +12,20 @@
             </div>
             <div v-else class="title-en-text-container">
                 <div class="title-rich-text">
-                    <div class="title-text text-highlight ">{{ t('product.high') }}</div>
-                    <div class="text-space"></div>
+                    <div class="title-text text-highlight">{{ t('product.high') }}</div>
+                    <div class="text-space">sp</div>
                     <div class="title-text">{{ t('product.accuracy') }}</div>
                 </div>
                 <div class="title-rich-text">
-                    <div class="title-text text-highlight ">{{ t('product.no') }}</div>
-                    <div class="text-space"></div>
+                    <div class="title-text text-highlight">{{ t('product.no') }}</div>
+                    <div class="text-space">sp</div>
                     <div class="title-text">{{ t('product.leakage') }}</div>
                 </div>
             </div>
             <div class="divider"></div>
             <div class="title-rich-text">
                 <div class="sub-title-text">{{ t('product.best') }}</div>
-                <div v-if="!isZh" class="text-space"></div>
+                <div v-if="!isZh" class="text-space">sp</div>
                 <div class="sub-title-text text-highlight ">{{ t('product.quality') }}</div>
             </div>
         </div>
@@ -47,14 +47,13 @@ const isZh = computed(() => locale.value == 'zh');
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .main-product {
     width: 100%;
     height: 812px;
     background: var(--white);
     display: flex;
     flex-direction: row;
-
     .product-img-container {
         flex: 1;
         display: flex;
@@ -68,7 +67,6 @@ const isZh = computed(() => locale.value == 'zh');
             object-fit: contain;
         }
     }
-
     .product-text {
         display: flex;
         width: 898px;
@@ -90,7 +88,7 @@ const isZh = computed(() => locale.value == 'zh');
             align-items: center;
 
             .text-space {
-                width: 15px;
+                color: transparent;
             }
         }
         .title-text {
@@ -99,7 +97,7 @@ const isZh = computed(() => locale.value == 'zh');
             color: var(--title-2);
         }
         .sub-title-text {
-            font-size: 60px;
+            font-size: 54px;
             color: var(--body);
         }
         .text-highlight {
@@ -113,10 +111,6 @@ const isZh = computed(() => locale.value == 'zh');
             margin-bottom: 60px;
         }
     }
-
-
-
-
 }
 </style>
 

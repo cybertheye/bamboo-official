@@ -1,8 +1,9 @@
 <template>
     <div class="hots-header">
         <img id="logo" src="../assets/images/logo.jpg" alt="logo" @click="onLogoClick">
-        <img class="title" :src="getImageImport(isZh ? 'title.png' : 'title_en.png')" />
-        <div class="space"></div>
+        <div class="title-container space">
+            <img class="title" src="@/assets/images/info/title.png"  alt="标题"/>
+        </div>
         <img id="exchange-language" :src="getImageImport(isZh ? 'language_zh.png' : 'language_en.png')" @click="onExchangeLanguageClick">
         <div id="join-us" @click="onJoinUsClick">{{ t('common.aboutUs')  }}</div>
         <div id="interest" @click="onInterestClick">{{ t('common.interest')  }}</div>
@@ -25,7 +26,7 @@ const onJoinUsClick = () => {
     });
 }
 
-const onInterestClick = () => window.open('mailto:sales@fanbearinghousing.com?subject=致信斑驳机电官网');
+const onInterestClick = () => window.open('mailto:sales@fanbearinghousing.com?subject=Inquire and make friends');
 
 const onLogoClick = () => {
     router.push({
@@ -55,8 +56,7 @@ const onExchangeLanguageClick = () => {
     left: 0;
     right: 0;
     z-index: 999;
-    padding-left: 229px;
-    padding-right: 240px;
+    padding: 0 80px;
     #logo {
         width: 127px;
         height: 127px;
@@ -64,11 +64,18 @@ const onExchangeLanguageClick = () => {
         user-select: none;
     }
 
-    .title {
-        height: 24px;
-        width: 576px;
-        margin-left: 60px;
+    .title-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .title {
+            height: 28px;
+            width: 459px;
+            margin-left: 60px;
+        }
     }
+
 
     #exchange-language {
         width: 48px;

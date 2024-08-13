@@ -1,6 +1,8 @@
 import { createRouter, createWebHashHistory, type RouteRecordRaw } from 'vue-router'
 import { type RouterOptions } from 'vue-router'
 
+const isMobile = /Mobi|Android|iPhone/i.test(navigator.userAgent);
+
 // 路由集合
 const routes: (RouteRecordRaw | any)[] = [
     {

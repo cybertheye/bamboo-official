@@ -125,7 +125,6 @@ const images = [
                 flex-direction: row;
                 justify-content: end;
                 align-items: center;
-                z-index: 999;
                 position: relative;
                 .cert-img {
                     flex: 1;

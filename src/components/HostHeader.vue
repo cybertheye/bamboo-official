@@ -2,12 +2,13 @@
     <div class="hots-header">
         <img id="logo" src="../assets/images/logo.jpg" alt="logo" @click="onLogoClick">
         <div class="title-container space">
-            <img class="title" src="@/assets/images/info/title.png"  alt="标题"/>
+<!--            <img class="title" src="@/assets/images/info/title.png"  alt="标题"/>-->
+            <div @click="onTitleClick" class="title-text">FAN BEARING HOUSING MANUFACTURER</div>
         </div>
         <img id="exchange-language" :src="getImageImport(isZh ? 'language_zh.png' : 'language_en.png')" @click="onExchangeLanguageClick">
-        <div id="join-us" @click="onJoinUsClick">{{ t('common.aboutUs')  }}</div>
+        <div v-if="props.showAboutUs" class="join-us" @click="onJoinUsClick">{{ t('common.aboutUs')  }}</div>
+        <div v-if="props.showTechIntro" class="join-us" @click="onTechIntroClick">{{ t('common.techIntro')  }}</div>
         <div id="interest" @click="onInterestClick">{{ t('common.interest')  }}</div>
-
     </div>
 </template>
 
@@ -26,19 +27,31 @@ const onJoinUsClick = () => {
     });
 }
 
-const onInterestClick = () => window.open('mailto:sales@fanbearinghousing.com?subject=Inquire and make friends');
+const onTechIntroClick = () => {
+    router.push({
+        name: 'home',
+    })
+}
 
+const onInterestClick = () => window.open('mailto:sales@fanbearinghousing.com?subject=Inquire and make friends');
 const onLogoClick = () => {
     router.push({
         name: 'home',
     });
 }
 
-
 const onExchangeLanguageClick = () => {
     const isZh = locale.value == 'zh';
     locale.value = isZh ? 'en' : 'zh'
 }
+
+const onTitleClick = () => {
+    router.push({
+        name: 'home'
+    })
+}
+
+const props = defineProps<{ showAboutUs: boolean, showTechIntro: boolean}>()
 
 
 </script>
@@ -63,20 +76,17 @@ const onExchangeLanguageClick = () => {
         cursor: pointer;
         user-select: none;
     }
-
     .title-container {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        .title {
-            height: 28px;
-            width: 459px;
-            margin-left: 60px;
+        .title-text {
+            font-size: 32px;
+            font-weight: bold;
+            cursor: pointer;
         }
     }
-
-
     #exchange-language {
         width: 48px;
         height: 48px;
@@ -88,9 +98,10 @@ const onExchangeLanguageClick = () => {
         flex: 1;
     }
 
-    #join-us {
+    .join-us {
         width: 122px;
         height: 48px;
+        flex-basis: 122px;
         margin-left: 20px;
         background-color: var(--primary);
         color: var(--white);

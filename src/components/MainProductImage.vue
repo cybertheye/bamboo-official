@@ -13,19 +13,19 @@
             <div v-else class="title-en-text-container">
                 <div class="title-rich-text">
                     <div class="title-text text-highlight">{{ t('product.high') }}</div>
-                    <div class="text-space">sp</div>
+<!--                    <div class="text-space">sp</div>-->
                     <div class="title-text">{{ t('product.accuracy') }}</div>
                 </div>
                 <div class="title-rich-text">
                     <div class="title-text text-highlight">{{ t('product.no') }}</div>
-                    <div class="text-space">sp</div>
+<!--                    <div class="text-space">sp</div>-->
                     <div class="title-text">{{ t('product.leakage') }}</div>
                 </div>
             </div>
             <div class="divider"></div>
             <div class="title-rich-text">
                 <div class="sub-title-text">{{ t('product.best') }}</div>
-                <div v-if="!isZh" class="text-space">sp</div>
+<!--                <div v-if="!isZh" class="text-space">sp</div>-->
                 <div class="sub-title-text text-highlight ">{{ t('product.quality') }}</div>
             </div>
         </div>
@@ -56,6 +56,7 @@ const isZh = computed(() => locale.value == 'zh');
     flex-direction: row;
     .product-img-container {
         flex: 1;
+        z-index: 1;
         display: flex;
         flex-direction: column;
         justify-content: start;
@@ -72,6 +73,7 @@ const isZh = computed(() => locale.value == 'zh');
         width: 898px;
         padding-left: 240px;
         flex-direction: column;
+        z-index: 99;
         .title-zh-text {
             font-size: 20px;
             color: var(--body);

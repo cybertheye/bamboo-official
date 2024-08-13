@@ -48,13 +48,10 @@ const onBannerItemClick = (index: number) => {
     visible.value = true;
     previewIndexRef.value = index;
 }
-
 const visible = ref(false)
-
 const onPreviewClose = () => {
     visible.value =  false;
 }
-
 const onSeriesBannerItemMouseenter = (index: number) => {
     selectedIndexRef.value = index;
 }

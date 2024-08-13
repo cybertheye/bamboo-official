@@ -10,9 +10,16 @@
             </div>
         </div>
         <div v-if="previewMedia !== null" class="preview-container">
-            <img class="preview-img" v-if="!previewMedia.video" :src="getImageImport(isZh ? previewMedia.img : (previewMedia.enImg ?? previewMedia.img))" alt="预览图片">
+            <img @click="onPreviewImageClick" class="preview-img" v-if="!previewMedia.video" :src="getImageImport(isZh ? previewMedia.img : (previewMedia.enImg ?? previewMedia.img))" alt="预览图片">
             <video class="preview-video" v-else :src="getVideoImport(previewMedia.video)" controls></video>
         </div>
+
+        <vue-easy-lightbox
+            :visible="visible"
+            :imgs="previewImages.map((v) => getImageImport(v))"
+            :index="previewIndexRef"
+            @hide="onPreviewClose"
+        />
     </div>
 </template>
 
@@ -23,6 +30,32 @@ import { TechProcessPreviewModel } from "@/hooks/useTechProcessDataHook";
 const props = defineProps<{ model: TechProcessPreviewModel }>();
 const { locale } = useI18n<{ locale: 'zh' | 'en' }>();
 const isZh = computed(() => locale.value == 'zh')
+const visible = ref(false)
+const onPreviewClose = () => {
+    visible.value =  false;
+}
+
+const previewImages = computed((): string[] => {
+    const list: string[] = [];
+    for (let i = 0; i < props.model.medias.length; i++) {
+        const media = props.model.medias[i];
+        if (media.video == null) {
+            if (isZh) {
+                list.push(media.img);
+            } else {
+                list.push(media.enImg ?? media.img);
+            }
+        }
+    }
+    return list;
+})
+
+const previewIndexRef = computed(() => {
+    if (previewMedia.value?.video !== null) {
+        return -1;
+    }
+    return previewImages.value.indexOf(previewMedia.value?.img);
+})
 
 
 const selectedIndexRef = ref<number>(0);
@@ -33,6 +66,9 @@ const previewMedia = computed(() => {
     return null;
 });
 
+const onPreviewImageClick = () => {
+    visible.value = true;
+}
 
 const onTabClick = (index: number) => {
     selectedIndexRef.value = index;
@@ -92,6 +128,7 @@ const getVideoImport = (path: string) =>new URL(`../assets/videos/${path}`, impo
             width: 504px;
             height: 365px;
             object-fit: contain;
+            cursor: pointer;
         }
 
         .preview-video {

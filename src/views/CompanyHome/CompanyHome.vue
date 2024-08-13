@@ -1,6 +1,6 @@
 <template>
     <div class="home-page">
-        <HostHeader />
+        <HostHeader :show-about-us="true" :show-tech-intro="false" />
         <div class="content"><MainProductImage /></div>
         <div class="tech-preview-timeline">
             <div class="timeline-title">{{ t('tech.title') }} </div>

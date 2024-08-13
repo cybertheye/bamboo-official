@@ -1,6 +1,6 @@
 <template>
     <div class="home-page">
-        <HostHeader />
+        <HostHeader :show-about-us="false" :show-tech-intro="true" />
         <div class="content"><CompanyIntroduce /></div>
         <CertificateIntroduce />
         <HostFooter />

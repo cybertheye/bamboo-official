@@ -14,11 +14,17 @@
             <video class="preview-video" v-else :src="getVideoImport(previewMedia.video)" controls></video>
         </div>
 
-        <vue-easy-lightbox
+        <vue-easy-lightbox v-if="isZh"
             :visible="visible"
-            :imgs="previewImages.map((v) => getImageImport(v))"
+            :imgs="previewImagesZh.map((v) => getImageImport(v))"
             :index="previewIndexRef"
             @hide="onPreviewClose"
+        />
+        <vue-easy-lightbox v-else
+                           :visible="visible"
+                           :imgs="previewImagesEn.map((v) => getImageImport(v))"
+                           :index="previewIndexRef"
+                           @hide="onPreviewClose"
         />
     </div>
 </template>
@@ -34,30 +40,27 @@ const visible = ref(false)
 const onPreviewClose = () => {
     visible.value =  false;
 }
-
-const previewImages = computed((): string[] => {
-    const list: string[] = [];
-    for (let i = 0; i < props.model.medias.length; i++) {
-        const media = props.model.medias[i];
-        if (media.video == null) {
-            if (isZh) {
-                list.push(media.img);
-            } else {
-                list.push(media.enImg ?? media.img);
-            }
-        }
+const previewImagesZh: string[] = [];
+const previewImagesEn: string[] = [];
+for (let i = 0; i < props.model.medias.length; i++) {
+    const media = props.model.medias[i];
+    if (media.video == null) {
+        previewImagesZh.push(media.img);
+        previewImagesEn.push(media.enImg ?? media.img);
     }
-    return list;
+}
+const previewImages = computed((): string[] => {
+    if (isZh) {
+        return previewImagesZh;
+    }
+    return previewImagesEn;
 })
-
 const previewIndexRef = computed(() => {
     if (previewMedia.value?.video !== null) {
         return -1;
     }
     return previewImages.value.indexOf(previewMedia.value?.img);
 })
-
-
 const selectedIndexRef = ref<number>(0);
 const previewMedia = computed(() => {
     if (props.model.medias.length > 0) {
@@ -65,20 +68,14 @@ const previewMedia = computed(() => {
     }
     return null;
 });
-
 const onPreviewImageClick = () => {
     visible.value = true;
 }
-
 const onTabClick = (index: number) => {
     selectedIndexRef.value = index;
 }
-
-
 const getImageImport = (path: string) =>new URL(`../assets/images/tech/${path}`, import.meta.url).href;
 const getVideoImport = (path: string) =>new URL(`../assets/videos/${path}`, import.meta.url).href;
-
-
 </script>
 
 <style lang="scss">

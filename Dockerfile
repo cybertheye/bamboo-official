@@ -15,7 +15,7 @@ COPY ./ssl /etc/nginx/ssl
 
 # 添加nginx配置,暴露80端口
 EXPOSE 80
-# EXPOSE 443
+EXPOSE 443
 
 # 覆盖nginx默认配置
 COPY nginx.conf /etc/nginx/conf.d/default.conf

@@ -37,6 +37,7 @@ const onLinkToAboutUs = () => {
     width: 100%;
     height: 100vh;
     overflow: auto;
+    min-width: 1440px;
     .content {
         padding-top: 127px;
     }

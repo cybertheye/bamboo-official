@@ -31,6 +31,7 @@ const { techProcessData } = useTechProcessDataHook();
     width: 100vw;
     height: 100vh;
     overflow: auto;
+    min-width: 1440px;
 
     .content {
         padding-top: 127px;

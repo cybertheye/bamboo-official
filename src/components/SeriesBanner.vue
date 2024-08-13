@@ -101,6 +101,7 @@ const onSeriesBannerItemMouseleave = (index: number) => {
         display: flex;
         flex-direction: row;
         width: 100vw;
+        min-width: 1440px;
         .series-swiper-control {
             max-width: 280px;
             min-width: 100px;

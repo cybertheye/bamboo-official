@@ -23,6 +23,7 @@
     "axios": "^1.7.4",
     "dayjs": "^1.11.9",
     "pinia": "^2.2.1",
+    "swiper": "^10.2.0",
     "vue": "^3.3.4",
     "vue-easy-lightbox": "next",
     "vue-i18n": "^9.13.1",

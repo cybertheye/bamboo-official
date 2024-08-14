@@ -11,19 +11,19 @@ const routes: (RouteRecordRaw | any)[] = [
         children: [
             {
                 path: '/:pathMatch(.*)*',
-                component: () => import('@/views/CompanyHome/CompanyHome.vue')
+                component: () => isMobile ? import('@/views/CompanyHomeMobile/CompanyHomeMobile.vue') : import('@/views/CompanyHome/CompanyHome.vue')
             }
         ]
     },
     {
         path: '/home',
         name: 'home',
-        component: () => import('@/views/CompanyHome/CompanyHome.vue')
+        component: () => isMobile ? import('@/views/CompanyHomeMobile/CompanyHomeMobile.vue') : import('@/views/CompanyHome/CompanyHome.vue')
     },
     {
         path: '/about_us',
         name: 'about_us',
-        component: () => import('@/views/AboutUs/AboutUs.vue')
+        component: () => isMobile ? import('@/views/AboutUsMobile/AboutUsMobile.vue') : import('@/views/AboutUs/AboutUs.vue')
     },
 
 ]

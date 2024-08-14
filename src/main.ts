@@ -4,6 +4,8 @@ import App from '@/App.vue'
 import router from '@/router'
 import i18n from './i18n/i18n'
 import VueEasyLightbox from 'vue-easy-lightbox'
+import { register } from "swiper/element/bundle";
+register();
 import { createPinia } from 'pinia';
 const pinia = createPinia();
 

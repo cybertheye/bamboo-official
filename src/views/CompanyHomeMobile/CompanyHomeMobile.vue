@@ -1,26 +1,26 @@
 <template>
     <div class="home-page">
-        <HostHeader :show-about-us="true" :show-tech-intro="false" />
-        <div class="content"><MainProductImage /></div>
+        <HostHeaderMobile :show-about-us="true" :show-tech-intro="false" />
+        <div class="content"><MainProductImageMobile /></div>
         <div class="tech-preview-timeline">
             <div class="timeline-title">{{ t('tech.title') }} </div>
-            <TechVideoImagePreview v-for="process in techProcessData" :model="process"/>
+            <TechProcessPreviewMobile v-for="process in techProcessData" :model="process"/>
         </div>
-        <SeriesBanner />
-        <HostFooter />
+        <SeriesBannerMobile />
+        <HostFooterMobile />
     </div>
 </template>
 
 <script lang="ts" setup>
 
-import MainProductImage from "@/components/MainProductImage.vue";
-import HostFooter from "@/components/HostFooter.vue";
-import HostHeader from "@/components/HostHeader.vue";
-import TechVideoImagePreview from "@/components/TechProcessPreview.vue";
-import SeriesBanner from "@/components/SeriesBanner.vue";
 import { useTechProcessDataHook } from "@/hooks/useTechProcessDataHook"
 import { useI18n } from 'vue-i18n';
 import type { MessageSchema } from '@/i18n/message_schema'
+import HostHeaderMobile from "@/components/HostHeaderMobile.vue";
+import HostFooterMobile from "@/components/HostFooterMobile.vue";
+import MainProductImageMobile from "@/components/MainProductImageMobile.vue";
+import TechProcessPreviewMobile from "@/components/TechProcessPreviewMobile.vue";
+import SeriesBannerMobile from "@/components/SeriesBannerMobile.vue";
 const { t, locale } = useI18n<{ message: MessageSchema, locale: 'zh' | 'en' }>();
 const { techProcessData } = useTechProcessDataHook();
 
@@ -31,10 +31,8 @@ const { techProcessData } = useTechProcessDataHook();
     width: 100vw;
     height: 100vh;
     overflow: auto;
-    min-width: 1440px;
-
     .content {
-        padding-top: 127px;
+        padding-top: 100px;
     }
 
     .tech-preview-timeline {
@@ -42,24 +40,23 @@ const { techProcessData } = useTechProcessDataHook();
         flex-direction: column;
         align-items: center;
         background-color: #f7f7f7;
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-top: 30px;
         .timeline-title {
-            font-size: 28px;
-            line-height: 33px;
+            font-size: 14px;
+            line-height: 16px;
             text-align: center;
             font-weight: bolder;
-            margin-bottom: 44px;
+            margin-bottom: 22px;
             position: relative;
             color:  var(--title);
         }
         .timeline-title::after {
             content: "";
             position: absolute;
-            top: 54px;
-            left: 54px;
-            right: 54px;
-            height: 4px;
+            top: 27px;
+            left: 27px;
+            right: 27px;
+            height: 2px;
             background-color: var(--title);
         }
     }

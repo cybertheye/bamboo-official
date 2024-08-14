@@ -9,6 +9,9 @@
 
         <div class="cert-gallery-container">
             <div class="cert-images-container">
+                <div class="tag">
+                    <img class="tag-img" src="@/assets/images/introduce/design_cert_sign.png" alt="水印">
+                </div>
                 <div class="cert-img-container">
                     <img v-for="(img, index) in images" class="cert-img" :src="img" @click="onBannerItemClick(index)" alt="证书">
                 </div>
@@ -20,9 +23,7 @@
                 <div class="name-text">{{ t('cert.cert3')}}</div>
             </div>
 
-            <div class="tag">
-                <img class="tag-img" src="@/assets/images/introduce/design_cert_sign.png" alt="水印">
-            </div>
+
         </div>
 
         <vue-easy-lightbox
@@ -120,6 +121,7 @@ const images = [
             width: 100%;
             padding-left: 239px;
             padding-top: 140px;
+            position: relative;
             .cert-img-container {
                 display: flex;
                 flex-direction: row;
@@ -131,6 +133,17 @@ const images = [
                     width: 100%;
                     height: 476px;
                     margin-left: 20px;
+                    object-fit: contain;
+                    cursor: pointer;
+                }
+            }
+            .tag {
+                position: absolute;
+                top: 36px;
+                left: 0;
+                .tag-img {
+                    height: 169px;
+                    width: 1087px;
                     object-fit: contain;
                 }
             }
@@ -172,16 +185,7 @@ const images = [
             bottom: 0;
             width: 2px;
         }
-        .tag {
-            position: absolute;
-            top: 275px;
-            left: 0;
-            .tag-img {
-                height: 169px;
-                width: 1087px;
-                object-fit: contain;
-            }
-        }
+
     }
 
 }

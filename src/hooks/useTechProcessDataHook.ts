@@ -6,11 +6,13 @@ export class  TechProcessPreviewMediaModel {
     img: string;
     enImg: string | null;
     video: string | null;
+    embedYoutubeVideo: string | null;
 
-    constructor(img: string, video: string | null, enImg: string | null) {
+    constructor(img: string, video: string | null, enImg: string | null, embedYoutubeVideo: string | null) {
         this.img = img;
         this.enImg = enImg;
         this.video = video;
+        this.embedYoutubeVideo = embedYoutubeVideo;
     }
 }
 
@@ -31,13 +33,14 @@ export class TechProcessPreviewModel {
     title: string;
     content?: string;
     stepSrc: any;
+    tagSrc: any;
     isFirst: boolean;
     isLast: boolean;
     textAlignmentStart: boolean;
     medias: TechProcessPreviewMediaModel[];
 
 
-    constructor(title: string, content: string | undefined, stepSrc: any, isFirst: boolean, isLast: boolean, alignmentStart: boolean, medias: TechProcessPreviewMediaModel[]) {
+    constructor(title: string, content: string | undefined, stepSrc: any, tagSrc: any, isFirst: boolean, isLast: boolean, alignmentStart: boolean, medias: TechProcessPreviewMediaModel[]) {
         this.title = title;
         this.content = content;
         this.stepSrc = stepSrc;
@@ -45,6 +48,7 @@ export class TechProcessPreviewModel {
         this.isLast = isLast;
         this.textAlignmentStart = alignmentStart;
         this.medias = medias;
+        this.tagSrc = tagSrc;
     }
 
 }
@@ -55,24 +59,24 @@ export const useTechProcessDataHook = () => {
 
 
     const techProcessData =  computed(() => [
-        new TechProcessPreviewModel(t('tech.process1'), t('tech.process1Html'),  new URL('@/assets/images/icons/step1.png', import.meta.url).href, true, false, false, [
-            new TechProcessPreviewMediaModel('video_01.jpg', '01.mp4', null),
-            new TechProcessPreviewMediaModel('01.png', null, null),
-            new TechProcessPreviewMediaModel('02.png', null,null),
-            new TechProcessPreviewMediaModel('03.png', null,null),
+        new TechProcessPreviewModel(t('tech.process1'), t('tech.process1Html'),  new URL('@/assets/images/icons/step1.png', import.meta.url).href, new URL('@/assets/images/icons/process1.png', import.meta.url).href, true, false, false, [
+            new TechProcessPreviewMediaModel('video_01.jpg', '01.mp4', null, 'https://www.youtube.com/embed/ssxCJXR1Y1c'),
+            new TechProcessPreviewMediaModel('01.png', null, null, null),
+            new TechProcessPreviewMediaModel('02.png', null,null, null),
+            new TechProcessPreviewMediaModel('03.png', null,null, null),
         ]),
-        new TechProcessPreviewModel(t('tech.process2'), t('tech.process2Html'),  new URL('@/assets/images/icons/step2.png', import.meta.url).href, false, false, true, [
-            new TechProcessPreviewMediaModel('video_02.jpg', '02.mp4', null),
-            new TechProcessPreviewMediaModel('video_03.jpg', '03.mp4', null),
+        new TechProcessPreviewModel(t('tech.process2'), t('tech.process2Html'),  new URL('@/assets/images/icons/step2.png', import.meta.url).href, new URL('@/assets/images/icons/process2.png', import.meta.url).href, false, false, true, [
+            new TechProcessPreviewMediaModel('video_02.jpg', '02.mp4', null, 'https://www.youtube.com/embed/ZjZIW-iAvg0'),
+            new TechProcessPreviewMediaModel('video_03.jpg', '03.mp4', null, 'https://www.youtube.com/embed/hFKsWUYF2Eo'),
         ]),
-        new TechProcessPreviewModel(t('tech.process3'), t('tech.process3Html'),  new URL('@/assets/images/icons/step3.png', import.meta.url).href, false, false, false, [
-            new TechProcessPreviewMediaModel('04.png', null, '04_en.png'),
+        new TechProcessPreviewModel(t('tech.process3'), t('tech.process3Html'),  new URL('@/assets/images/icons/step3.png', import.meta.url).href, new URL('@/assets/images/icons/process3.png', import.meta.url).href, false, false, false, [
+            new TechProcessPreviewMediaModel('04.png', null, '04_en.png', null),
         ]),
-        new TechProcessPreviewModel(t('tech.process4'), t('tech.process4Html'),  new URL('@/assets/images/icons/step4.png', import.meta.url).href, false, false, true,  [
-            new TechProcessPreviewMediaModel('video_04.jpg', '04.mp4', null),
+        new TechProcessPreviewModel(t('tech.process4'), t('tech.process4Html'),  new URL('@/assets/images/icons/step4.png', import.meta.url).href,new URL('@/assets/images/icons/process4.png', import.meta.url).href, false, false, true,  [
+            new TechProcessPreviewMediaModel('video_04.jpg', '04.mp4', null, 'https://www.youtube.com/embed/XrXVjkqz7Y0'),
         ]),
-        new TechProcessPreviewModel(t('tech.process5'), undefined,  new URL('@/assets/images/icons/step5.png', import.meta.url).href, false, true, false, [
-            new TechProcessPreviewMediaModel('05.jpg', null, null),
+        new TechProcessPreviewModel(t('tech.process5'), undefined,  new URL('@/assets/images/icons/step5.png', import.meta.url).href, new URL('@/assets/images/icons/process5.png', import.meta.url).href,false, true, false, [
+            new TechProcessPreviewMediaModel('05.jpg', null, null, null),
         ]),
     ]);
 

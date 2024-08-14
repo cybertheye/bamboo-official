@@ -165,18 +165,6 @@ export default (configEnv: ConfigEnv) => {
             open: false,
             port: 5000,
             host: true,
-            proxy: {
-                '/apis': {
-                    target: 'https://forguo.cn/api/',
-                    changeOrigin: true,
-                    rewrite: path => path.replace(/^\/apis/, '')
-                },
-                '/amap': {
-                    target: 'https://restapi.amap.com/',
-                    changeOrigin: true,
-                    rewrite: path => path.replace(/^\/amap/, '')
-                }
-            }
         }
     })
 }

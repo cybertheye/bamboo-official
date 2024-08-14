@@ -2,7 +2,7 @@
     <div class="introduce-container">
         <div :class="isZh ? 'introduce-text introduce-text-zh' : 'introduce-text' ">
             <div class="title-text">{{ t('introduce.title') }}</div>
-            <div class="sub-title-text">{{ t('introduce.subTitle') }}</div>
+            <div class="sub-title-text">FAN BEARING HOUSING MANUFACTURER</div>
             <div class="content-text">
                 <div class="content-span">{{ t('introduce.content1') }}</div>
                 <div class="content-span">{{ t('introduce.content2') }}</div>

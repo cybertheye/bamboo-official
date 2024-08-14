@@ -3,7 +3,7 @@
         <img id="logo" src="../assets/images/logo.jpg" alt="logo" @click="onLogoClick">
         <div class="title-container space">
 <!--            <img class="title" src="@/assets/images/info/title.png"  alt="标题"/>-->
-            <div @click="onTitleClick" class="title-text">FAN BEARING HOUSING MANUFACTURER</div>
+            <div @click="onTitleClick" class="title-text">{{ t('introduce.subTitle') }}</div>
         </div>
         <img id="exchange-language" :src="getImageImport(isZh ? 'language_zh.png' : 'language_en.png')" @click="onExchangeLanguageClick">
         <div v-if="props.showAboutUs" class="join-us" @click="onJoinUsClick">{{ t('common.aboutUs')  }}</div>
@@ -83,9 +83,10 @@ const props = defineProps<{ showAboutUs: boolean, showTechIntro: boolean}>()
         justify-content: center;
         align-items: center;
         .title-text {
-            font-size: 32px;
-            font-weight: bold;
+            font-size: 28px;
+            font-weight: 500;
             cursor: pointer;
+            color: var(--title);
         }
     }
     #exchange-language {

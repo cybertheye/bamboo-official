@@ -1,7 +1,7 @@
 <template>
     <div class="preview-container">
         <div class="preview-left">
-            <TechProcessText v-if="model.textAlignmentStart" :title="props.model.title" :body-html="props.model.content" :alignment-left="true" ></TechProcessText>
+            <TechProcessText v-if="model.textAlignmentStart" :title="props.model.title" :body-html="props.model.content" :tag-src="props.model.tagSrc" :alignment-left="true" ></TechProcessText>
             <TechVideoIntroduce v-else :model="model"></TechVideoIntroduce>
         </div>
         <div class="step-container">
@@ -10,7 +10,7 @@
             <div :class="model.isLast ? 'divider hidden' : 'divider'"></div>
         </div>
         <div class="preview-right">
-            <TechProcessText v-if="!model.textAlignmentStart" :title="props.model.title" :body-html="props.model.content" :alignment-left="false" ></TechProcessText>
+            <TechProcessText v-if="!model.textAlignmentStart" :title="props.model.title" :body-html="props.model.content" :tag-src="props.model.tagSrc" :alignment-left="false" ></TechProcessText>
             <TechVideoIntroduce v-else :model="model"></TechVideoIntroduce>
         </div>
 

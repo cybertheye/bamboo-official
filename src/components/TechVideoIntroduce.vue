@@ -11,9 +11,11 @@
         </div>
         <div v-if="previewMedia !== null" class="preview-container">
             <img @click="onPreviewImageClick" class="preview-img" v-if="!previewMedia.video" :src="getImageImport(isZh ? previewMedia.img : (previewMedia.enImg ?? previewMedia.img))" alt="预览图片">
-            <video class="preview-video" v-else :src="getVideoImport(previewMedia.video)" controls></video>
+            <div v-else>
+                <video v-if="!ipAddressStore.canAccessYouTubeVideo" class="preview-video" :src="getVideoImport(previewMedia.video!)" controls></video>
+                <iframe v-else class="preview-video" :src="previewMedia.embedYoutubeVideo!" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </div>
-
         <vue-easy-lightbox v-if="isZh"
             :visible="visible"
             :imgs="previewImagesZh.map((v) => getImageImport(v))"
@@ -32,7 +34,10 @@
 <script lang="ts" setup>
 
 import {useI18n} from "vue-i18n";
-import { TechProcessPreviewModel } from "@/hooks/useTechProcessDataHook";
+import {TechProcessPreviewModel, useTechProcessDataHook} from "@/hooks/useTechProcessDataHook";
+import {useIpAddressStore} from "@/stores/useIpAddressStore";
+import {onMounted} from "vue";
+
 const props = defineProps<{ model: TechProcessPreviewModel }>();
 const { locale } = useI18n<{ locale: 'zh' | 'en' }>();
 const isZh = computed(() => locale.value == 'zh')
@@ -76,6 +81,12 @@ const onTabClick = (index: number) => {
 }
 const getImageImport = (path: string) =>new URL(`../assets/images/tech/${path}`, import.meta.url).href;
 const getVideoImport = (path: string) =>new URL(`../assets/videos/${path}`, import.meta.url).href;
+const ipAddressStore = useIpAddressStore();
+
+onMounted(() => {
+    ipAddressStore.reloadIpInfo();
+});
+
 </script>
 
 <style lang="scss">

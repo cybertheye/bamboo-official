@@ -1,9 +1,9 @@
 <template>
-    <div class="home-page">
+    <div class="home-page-mobile">
         <HostHeaderMobile :show-about-us="true" :show-tech-intro="false" />
-        <div class="content"><MainProductImageMobile /></div>
-        <div class="tech-preview-timeline">
-            <div class="timeline-title">{{ t('tech.title') }} </div>
+        <div class="content-mobile"><MainProductImageMobile /></div>
+        <div class="tech-preview-timeline-mobile">
+            <div class="timeline-title-mobile">{{ t('tech.title') }} </div>
             <TechProcessPreviewMobile v-for="process in techProcessData" :model="process"/>
         </div>
         <SeriesBannerMobile />
@@ -27,21 +27,21 @@ const { techProcessData } = useTechProcessDataHook();
 </script>
 
 <style>
-.home-page {
+.home-page-mobile {
     width: 100vw;
     height: 100vh;
     overflow: auto;
-    .content {
+    .content-mobile {
         padding-top: 100px;
     }
 
-    .tech-preview-timeline {
+    .tech-preview-timeline-mobile {
         display: flex;
         flex-direction: column;
         align-items: center;
         background-color: #f7f7f7;
         padding-top: 30px;
-        .timeline-title {
+        .timeline-title-mobile {
             font-size: 14px;
             line-height: 16px;
             text-align: center;
@@ -50,7 +50,7 @@ const { techProcessData } = useTechProcessDataHook();
             position: relative;
             color:  var(--title);
         }
-        .timeline-title::after {
+        .timeline-title-mobile::after {
             content: "";
             position: absolute;
             top: 27px;

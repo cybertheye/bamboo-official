@@ -1,5 +1,5 @@
 <template>
-    <div class="main-product">
+    <div class="main-product-mobile">
         <div class="product-img-container">
             <img class="product-img" src="../assets/images/products/main_product.png" alt="主图">
         </div>
@@ -42,7 +42,7 @@ const isZh = computed(() => locale.value == 'zh');
 </script>
 
 <style scoped lang="scss">
-.main-product {
+.main-product-mobile {
     width: 100%;
     background: var(--white);
     position: relative;

@@ -13,7 +13,7 @@ const props = defineProps<{ title: string, bodyHtml?: string, alignmentLeft: boo
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .preview-text {
     display: flex;

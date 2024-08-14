@@ -89,7 +89,7 @@ onMounted(() => {
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .preview-media-container {
     display: flex;

@@ -1,7 +1,7 @@
 <template>
-    <div class="home-page">
+    <div class="home-page-mobile">
         <HostHeaderMobile :show-about-us="false" :show-tech-intro="true" />
-        <div class="content"><CompanyIntroduceMobile /></div>
+        <div class="content-mobile"><CompanyIntroduceMobile /></div>
         <CertificateIntroduceMobile />
         <HostFooterMobile />
     </div>
@@ -25,23 +25,14 @@ import CompanyIntroduceMobile from "@/components/CompanyIntroduceMobile.vue";
 const { t, locale } = useI18n<{ message: MessageSchema, locale: 'zh' | 'en' }>();
 const { techProcessData } = useTechProcessDataHook();
 
-const router = useRouter();
-
-const onLinkToAboutUs = () => {
-    router.push({
-        name: 'about_us',
-    });
-}
-
-
 </script>
 
 <style>
-.home-page {
+.home-page-mobile {
     width: 100%;
     height: 100vh;
     overflow: auto;
-    .content {
+    .content-mobile {
         padding-top: 100px;
     }
 }

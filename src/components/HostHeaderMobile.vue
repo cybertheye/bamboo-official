@@ -71,7 +71,6 @@ const props = defineProps<{ showAboutUs: boolean, showTechIntro: boolean}>()
     right: 0;
     z-index: 999;
     box-shadow: 0 4px 4px 0 rgba(0,0,0,0.1);
-
     user-select: none;
 
     .top-container {

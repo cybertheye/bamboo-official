@@ -1,5 +1,5 @@
 <template>
-    <div class="preview-text">
+    <div class="preview-text-mobile">
         <div class="title">{{ props.title }}</div>
         <div class="body-html" v-if="props.bodyHtml != null" v-html="props.bodyHtml"></div>
         <div class="tag-img-container">
@@ -13,9 +13,9 @@ const props = defineProps<{ title: string, bodyHtml?: string, tagSrc: any }>();
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
-.preview-text {
+.preview-text-mobile {
     display: flex;
     flex-direction: column;
     justify-content: center;

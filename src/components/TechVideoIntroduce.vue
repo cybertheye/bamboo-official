@@ -16,18 +16,8 @@
                 <iframe v-else class="preview-video" :src="previewMedia.embedYoutubeVideo!" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
-        <vue-easy-lightbox v-if="isZh"
-            :visible="visible"
-            :imgs="previewImagesZh.map((v) => getImageImport(v))"
-            :index="previewIndexRef"
-            @hide="onPreviewClose"
-        />
-        <vue-easy-lightbox v-else
-                           :visible="visible"
-                           :imgs="previewImagesEn.map((v) => getImageImport(v))"
-                           :index="previewIndexRef"
-                           @hide="onPreviewClose"
-        />
+        <vue-easy-lightbox v-if="isZh" :visible="visible" :imgs="previewImagesZh.map((v) => getImageImport(v))" :index="previewIndexRef" @hide="onPreviewClose" />
+        <vue-easy-lightbox v-else :visible="visible" :imgs="previewImagesEn.map((v) => getImageImport(v))" :index="previewIndexRef" @hide="onPreviewClose" />
     </div>
 </template>
 

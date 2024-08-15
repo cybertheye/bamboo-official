@@ -1,11 +1,11 @@
 <template>
     <div class="hots-header">
-        <img id="logo" src="../assets/images/logo.jpg" alt="logo" @click="onLogoClick">
-        <div class="title-container space">
-<!--            <img class="title" src="@/assets/images/info/title.png"  alt="标题"/>-->
+        <div class="title-container">
             <div @click="onTitleClick" class="title-text">{{ t('introduce.subTitle') }}</div>
         </div>
-        <img id="exchange-language" :src="getImageImport(isZh ? 'language_zh.png' : 'language_en.png')" @click="onExchangeLanguageClick">
+        <img class="logo" src="../assets/images/logo.jpg" alt="logo" @click="onLogoClick">
+        <div class="spacer"></div>
+        <img class="exchange-language" :src="getImageImport(isZh ? 'language_zh.png' : 'language_en.png')" @click="onExchangeLanguageClick" alt="切换语言">
         <div v-if="props.showAboutUs" class="join-us" @click="onJoinUsClick">{{ t('common.aboutUs')  }}</div>
         <div v-if="props.showTechIntro" class="join-us" @click="onTechIntroClick">{{ t('common.techIntro')  }}</div>
         <div id="interest" @click="onInterestClick">{{ t('common.interest')  }}</div>
@@ -56,7 +56,7 @@ const props = defineProps<{ showAboutUs: boolean, showTechIntro: boolean}>()
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 .hots-header {
     display: flex;
@@ -71,17 +71,24 @@ const props = defineProps<{ showAboutUs: boolean, showTechIntro: boolean}>()
     min-width: 1440px;
     z-index: 999;
     padding: 0 80px;
-    #logo {
+    user-select: none;
+    .logo {
         width: 127px;
         height: 127px;
         cursor: pointer;
         user-select: none;
     }
     .title-container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        z-index: -1;
         .title-text {
             font-size: 28px;
             font-weight: 500;
@@ -89,14 +96,14 @@ const props = defineProps<{ showAboutUs: boolean, showTechIntro: boolean}>()
             color: var(--title);
         }
     }
-    #exchange-language {
+    .exchange-language {
         width: 48px;
         height: 48px;
         cursor: pointer;
         user-select: none;
     }
 
-    .space {
+    .spacer {
         flex: 1;
     }
 

@@ -1,10 +1,12 @@
 <template>
     <div :class="props.alignmentLeft ? 'preview-text alignment-left' : 'preview-text' ">
-        <div class="title">{{ props.title }}</div>
-        <div class="body-html" v-if="props.bodyHtml != null" v-html="props.bodyHtml"></div>
-        <div class="tag-img-container">
-            <img class="tag-img" :src="props.tagSrc" alt="tag">
+        <div class="title">
+            <div>{{ props.title }}</div>
+            <div class="tag-img-container">
+                <img class="tag-img" :src="props.tagSrc" alt="tag">
+            </div>
         </div>
+        <div class="body-html" v-if="props.bodyHtml != null" v-html="props.bodyHtml"></div>
     </div>
 </template>
 
@@ -13,7 +15,7 @@ const props = defineProps<{ title: string, bodyHtml?: string, alignmentLeft: boo
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 .preview-text {
     display: flex;
@@ -21,21 +23,21 @@ const props = defineProps<{ title: string, bodyHtml?: string, alignmentLeft: boo
     justify-content: center;
     height: 447px;
     width: 100%;
-    position: relative;
     .title {
         font-size: 24px;
         color: var(--title);
         font-weight: bold;
-    }
-    .tag-img-container {
-        position: absolute;
-        left: 45px;
-        top: 76px;
-        right: 0;
-        .tag-img {
-            height: 169px;
-            width: 100%;
-            object-fit: contain;
+        position: relative;
+        .tag-img-container {
+            position: absolute;
+            left: 45px;
+            top: -76px;
+            right: 0;
+            .tag-img {
+                height: 169px;
+                width: 100%;
+                object-fit: contain;
+            }
         }
     }
     .body-html {
@@ -49,16 +51,6 @@ const props = defineProps<{ title: string, bodyHtml?: string, alignmentLeft: boo
             color: var(--primary);
             font-weight: bold;
         }
-        //.highlight::after {
-        //    content: "";
-        //    position: absolute;
-        //    height: 11px;
-        //    left: 0;
-        //    right: 0;
-        //    bottom: 0;
-        //    background-color: var(--primary);
-        //    opacity: 0.2;
-        //}
     }
 }
 
@@ -69,17 +61,21 @@ const props = defineProps<{ title: string, bodyHtml?: string, alignmentLeft: boo
         text-align: right;
     }
 
-    .tag-img-container {
-        position: absolute;
-        top: 76px;
-        right: 16px;
-        .tag-img {
-            height: 169px;
-            width: 100%;
-            object-fit: contain;
+    .title {
+        width: 100%;
+        text-align: right;
+        .tag-img-container {
+            position: absolute;
+            top: -76px;
+            right: 0;
+            left: 0;
+            .tag-img {
+                height: 169px;
+                width: 100%;
+                object-fit: contain;
+            }
         }
     }
-
 }
 
 </style>

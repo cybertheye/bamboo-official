@@ -2,7 +2,7 @@
   <div class="introduce-container-mobile">
     <div :class="isZh ? 'introduce-text-mobile introduce-text-zh-mobile' : 'introduce-text-mobile' ">
       <div class="title-text-mobile">{{ t('introduce.title') }}</div>
-      <div class="sub-title-text-mobile">FAN BEARING HOUSING MANUFACTURER</div>
+<!--      <div class="sub-title-text-mobile">FAN BEARING HOUSING MANUFACTURER</div>-->
       <div class="content-text-mobile">
         <div class="content-span-mobile">{{ t('introduce.content1') }}</div>
         <div class="content-span-mobile">{{ t('introduce.content2') }}</div>

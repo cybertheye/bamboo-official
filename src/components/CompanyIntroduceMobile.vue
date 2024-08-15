@@ -6,7 +6,7 @@
       <div class="content-text-mobile">
         <div class="content-span-mobile">{{ t('introduce.content1') }}</div>
         <div class="content-span-mobile">{{ t('introduce.content2') }}</div>
-        <div class="content-span-mobile">{{ t('introduce.content3') }}</div>
+<!--        <div class="content-span-mobile">{{ t('introduce.content3') }}</div>-->
       </div>
     </div>
     <div class="introduce-img-mobile">

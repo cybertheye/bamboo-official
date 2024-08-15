@@ -9,9 +9,9 @@
 
     <div class="cert-gallery-container">
       <div class="cert-tab-list">
-        <div class="tab" v-for="(cert, index) in certs">
-          <div :class="activeIndexRef == index ? 'tab-text tab-text-active' : 'tab-text'" @click="onTabClick(index)">{{ cert }}</div>
-          <div :class="activeIndexRef == index ? 'tab-item-bar tab-item-bar-active' : 'tab-item-bar'"></div>
+        <div class="tab" >
+          <div class="tab-text tab-text-active">{{ selectedTabText }}</div>
+          <div class="tab-item-bar tab-item-bar-active"></div>
         </div>
       </div>
       <swiper class="cert-swiper"
@@ -48,10 +48,11 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import 'swiper/css';
 const swiperRef = ref<any | null>(null)
 const activeIndexRef = computed(() => swiperRef.value == null ? 0 : swiperRef.value.activeIndex);
-
 const { t, locale } = useI18n<{ message: MessageSchema, locale: 'zh' | 'en' }>();
 const isZh = computed(() => locale.value == 'zh');
 const selectedIndexRef = ref(0);
+const selectedTabText = computed(() => certs.value[activeIndexRef.value]);
+
 const certs = computed(() => [
   t('cert.cert1'),
   t('cert.cert2'),
@@ -173,8 +174,9 @@ const onTabClick = (index: number) => {
       .tab {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+        width: 100%;
         .tab-text {
           line-height: 28px;
           position: relative;

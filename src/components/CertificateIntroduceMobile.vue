@@ -13,9 +13,9 @@
           <div class="tab-text tab-text-active">{{ selectedTabText }}</div>
           <div class="tab-item-bar tab-item-bar-active"></div>
         </div>
-        <div class="tag">
+        <!-- <div class="tag">
                     <img class="tag-img" src="@/assets/images/introduce/design_cert_sign.png" alt="水印">
-                </div>
+                </div> -->
       </div>
       <swiper class="cert-swiper"
               slides-per-view="auto"

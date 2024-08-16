@@ -22,8 +22,6 @@
                 <div class="name-text">{{ t('cert.cert2')}}</div>
                 <div class="name-text">{{ t('cert.cert3')}}</div>
             </div>
-
-
         </div>
 
         <vue-easy-lightbox
@@ -135,6 +133,10 @@ const images = [
                     margin-left: 20px;
                     object-fit: contain;
                     cursor: pointer;
+                    transition: transform 0.3s ease; /* 添加平滑过渡效果 */
+                }
+                .cert-img:hover {
+                    transform: scale(1.1); /* 图片放大2倍 */
                 }
             }
             .tag {

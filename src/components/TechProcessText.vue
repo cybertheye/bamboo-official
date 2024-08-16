@@ -30,7 +30,7 @@ const props = defineProps<{ title: string, bodyHtml?: string, alignmentLeft: boo
         position: relative;
         .tag-img-container {
             position: absolute;
-            left: 45px;
+            left: 0;
             top: -76px;
             right: 0;
             .tag-img {

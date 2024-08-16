@@ -75,10 +75,11 @@ const onSlideChange = () => {
 <style scoped lang="scss">
 
 .series-banner-container {
-    background: #f7f7f7;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 20px;
+    background-color: var(--white);
     .title-text {
         font-weight: 600;
         font-size: 14px;

@@ -8,14 +8,8 @@ export const useIpAddressStore = defineStore('ipAddress', () => {
     const reloadIpInfo = async  () => {
         try {
             canAccessYouTubeVideo.value = await canAccessYouTube();
-
             console.log(`是否可以访问youtube ${canAccessYouTubeVideo.value}`);
-
-
         } catch (e) {
-
-            console.log(`e-${e}`);
-
             canAccessYouTubeVideo.value = false;
             console.log(`是否可以访问youtube ${canAccessYouTubeVideo.value}`);
         }

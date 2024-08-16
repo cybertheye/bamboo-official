@@ -3,7 +3,7 @@
         <div class="title">{{ props.title }}</div>
         <div class="body-html" v-if="props.bodyHtml != null" v-html="props.bodyHtml"></div>
         <div class="tag-img-container">
-            <img class="tag-img" :src="props.tagSrc" alt="tag">
+            <!-- <img class="tag-img" :src="props.tagSrc" alt="tag"> -->
         </div>
     </div>
 </template>

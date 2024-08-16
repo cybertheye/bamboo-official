@@ -32,6 +32,7 @@ const { t, locale } = useI18n<{ message: MessageSchema, locale: 'zh' | 'en' }>()
     justify-content: start;
     align-items: start;
     width: 100%;
+    padding-bottom: 20px;
     position: relative;
 
     .step-container {

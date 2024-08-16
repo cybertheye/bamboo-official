@@ -129,8 +129,8 @@ const props = defineProps<{ showAboutUs: boolean, showTechIntro: boolean}>()
         align-items: center;
         margin-bottom: 15px;
         .title-text {
-            font-size: 14px;
-            font-weight: 500;
+            font-size: 13px;
+            font-weight: 400;
             cursor: pointer;
             color: var(--title);
         }

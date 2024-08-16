@@ -7,8 +7,6 @@ export const useIpAddressQueryHook = () => {
         try {
             const response = await axios.get(url);
             const ipData = response.data;
-
-
             console.log(ipData.data)
 
             if (ipData.code === 0 && ['CN', 'HK', 'TW'].includes(ipData.data.country_id)) {
@@ -36,8 +34,7 @@ export const useIpAddressQueryHook = () => {
                 method: 'HEAD',
                 mode: 'no-cors'
             });
-            console.log(`response-${response}`);
-            return response.ok;
+            return true;
         } catch (error) {
             console.log(`e-${error}`);
             return false;

@@ -1,7 +1,7 @@
 <template>
   <div class="introduce-container-mobile">
     <div :class="isZh ? 'introduce-text-mobile introduce-text-zh-mobile' : 'introduce-text-mobile' ">
-      <img class="about-us-img-mobile" src="@/assets/images/introduce/about_us.png" alt="关于我们">
+      <!-- <img class="about-us-img-mobile" src="@/assets/images/introduce/about_us.png" alt="关于我们"> -->
       <div class="title-text-mobile">{{ t('introduce.title') }}</div>
       <div class="content-text-mobile">
         <div class="content-span-mobile">{{ t('introduce.content1') }}</div>

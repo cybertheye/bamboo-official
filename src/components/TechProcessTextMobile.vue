@@ -13,7 +13,7 @@ const props = defineProps<{ title: string, bodyHtml?: string, tagSrc: any }>();
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 .preview-text-mobile {
     display: flex;

@@ -1,17 +1,15 @@
 <template>
   <div class="introduce-container-mobile">
     <div :class="isZh ? 'introduce-text-mobile introduce-text-zh-mobile' : 'introduce-text-mobile' ">
+      <img class="about-us-img-mobile" src="@/assets/images/introduce/about_us.png" alt="关于我们">
       <div class="title-text-mobile">{{ t('introduce.title') }}</div>
-<!--      <div class="sub-title-text-mobile">FAN BEARING HOUSING MANUFACTURER</div>-->
       <div class="content-text-mobile">
         <div class="content-span-mobile">{{ t('introduce.content1') }}</div>
         <div class="content-span-mobile">{{ t('introduce.content2') }}</div>
-<!--        <div class="content-span-mobile">{{ t('introduce.content3') }}</div>-->
       </div>
     </div>
     <div class="introduce-img-mobile">
       <img class="factory-img-mobile" src="@/assets/images/introduce/factory.png" alt="工厂图片">
-      <img class="about-us-img-mobile" src="@/assets/images/introduce/about_us.png" alt="关于我们">
     </div>
   </div>
 </template>
@@ -30,10 +28,10 @@ const isZh = computed(() => locale.value == 'zh');
 .introduce-container-mobile {
   overflow: clip;
   .introduce-text-mobile {
-    margin-top: 20px;
     padding-top: 20px;
     padding-left: 10px;
     padding-right: 10px;
+    position: relative;
     .title-text-mobile {
       color: var(--title);
       font-weight: bolder;
@@ -65,6 +63,15 @@ const isZh = computed(() => locale.value == 'zh');
     .content-span-mobile {
       margin-top: 17px;
     }
+    .about-us-img-mobile {
+      position: absolute;
+      height: 85px;
+      top: 20px;
+      left: 80px;
+      width: 100%;
+      object-fit: contain;
+      -o-object-fit: contain;
+    }
   }
   .row-space-mobile {
     width: 40px;
@@ -72,21 +79,11 @@ const isZh = computed(() => locale.value == 'zh');
   .introduce-img-mobile {
     width: 100%;
     margin-top: 20px;
-    position: relative;
-    padding: 0 10px 72px;
+    padding: 0 10px 20px;
 
     .factory-img-mobile {
       width: 100%;
       object-fit: contain;
-    }
-    .about-us-img-mobile {
-      position: absolute;
-      height: 85px;
-      bottom: 20px;
-      left: 10px;
-      width: 100%;
-      object-fit: contain;
-      -o-object-fit: contain;
     }
   }
 

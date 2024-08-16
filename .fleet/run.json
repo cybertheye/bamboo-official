@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "name": "Run Vue.js App",
+            "type": "npm",
+            "environment": {
+                "NODE_ENV": "development"
+            },
+            "workingDir": ".",
+            "command": "npm run dev",
+        }
+    ]
+}
+

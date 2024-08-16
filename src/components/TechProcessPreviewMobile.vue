@@ -5,8 +5,8 @@
         </div>
         <div :class="model.isLast ? 'divider hidden' : 'divider'"></div>
         <div class="preview-right">
-            <TechVideoIntroduceMobile :model="model"></TechVideoIntroduceMobile>
             <TechProcessTextMobile :title="props.model.title" :body-html="props.model.content" :tag-src="props.model.tagSrc"></TechProcessTextMobile>
+            <TechVideoIntroduceMobile :model="model"></TechVideoIntroduceMobile>
         </div>
 
     </div>

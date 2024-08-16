@@ -50,10 +50,7 @@ const isZh = computed(() => locale.value == 'zh');
         width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: end;
-        position: absolute;
-        top: 0;
-        right: 0;
+        justify-content: center;
         z-index: 1;
         .product-img {
             object-fit: contain;
@@ -74,14 +71,12 @@ const isZh = computed(() => locale.value == 'zh');
             font-size: 10px;
             color: var(--body);
             margin-bottom: 12.5px;
-            margin-top: 160px;
         }
         .title-rich-text {
             display: flex;
             flex-direction: row;
             justify-content: start;
             align-items: center;
-
             .text-space {
                 color: transparent;
             }
@@ -94,13 +89,13 @@ const isZh = computed(() => locale.value == 'zh');
         .sub-title-text {
             font-size: 30px;
             color: var(--body);
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
         .text-highlight {
             color: var(--primary);
         }
         .title-en-text-container {
-            margin-top: 176px;
+            margin-top: 0;
         }
         .divider {
             width: 50px;

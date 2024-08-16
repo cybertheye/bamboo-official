@@ -13,6 +13,9 @@
           <div class="tab-text tab-text-active">{{ selectedTabText }}</div>
           <div class="tab-item-bar tab-item-bar-active"></div>
         </div>
+        <div class="tag">
+                    <img class="tag-img" src="@/assets/images/introduce/design_cert_sign.png" alt="水印">
+                </div>
       </div>
       <swiper class="cert-swiper"
               slides-per-view="auto"
@@ -137,6 +140,7 @@ const onTabClick = (index: number) => {
   }
   .cert-gallery-container {
     width: 100%;
+
     .cert-swiper {
       width: 44vw;
       position: relative;
@@ -170,13 +174,24 @@ const onTabClick = (index: number) => {
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
+      position: relative;
       padding: 0 22px;
+      .tag {
+          position: absolute;
+          left: 0;
+          top: 20px;
+          .tag-img {
+            height: 60px;
+            object-fit: co;
+          }
+        }
       .tab {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
+        position: relative;
         .tab-text {
           line-height: 28px;
           position: relative;

@@ -84,7 +84,7 @@ const isZh = computed(() => locale.value == 'zh');
         .title-text {
             font-size: 42px;
             font-weight: bold;
-            color: var(--title-2);
+            color: #4d4d4d;
         }
         .sub-title-text {
             font-size: 30px;

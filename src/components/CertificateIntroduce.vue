@@ -13,14 +13,14 @@
                     <img class="tag-img" src="@/assets/images/introduce/design_cert_sign.png" alt="水印">
                 </div>
                 <div class="cert-img-container">
-                    <img v-for="(img, index) in images" class="cert-img" :src="img" @click="onBannerItemClick(index)" alt="证书">
+                    <img v-for="(img, index) in images" :class="certImageHoverIndex == index ? 'cert-img cert-img-active' : 'cert-img'" :src="img" @mouseenter="onSeriesBannerItemMouseenter(index)" @mouseleave="onSeriesBannerItemMouseleave" @click="onBannerItemClick(index)" alt="证书">
                 </div>
             </div>
             <div class="dash-line"></div>
             <div class="cert-name-list">
-                <div class="name-text">{{ t('cert.cert1')}}</div>
-                <div class="name-text">{{ t('cert.cert2')}}</div>
-                <div class="name-text">{{ t('cert.cert3')}}</div>
+                <div :class="certImageHoverIndex == 0 ? 'name-text name-text-active' : 'name-text'" @click="onBannerItemClick(0)" @mouseenter="onSeriesBannerItemMouseenter(0)" @mouseleave="onSeriesBannerItemMouseleave">{{ t('cert.cert1')}}</div>
+                <div :class="certImageHoverIndex == 1 ? 'name-text name-text-active' : 'name-text'" @click="onBannerItemClick(1)" @mouseenter="onSeriesBannerItemMouseenter(1)" @mouseleave="onSeriesBannerItemMouseleave">{{ t('cert.cert2')}}</div>
+                <div :class="certImageHoverIndex == 2 ? 'name-text name-text-active' : 'name-text'" @click="onBannerItemClick(2)" @mouseenter="onSeriesBannerItemMouseenter(2)" @mouseleave="onSeriesBannerItemMouseleave">{{ t('cert.cert3')}}</div>
             </div>
         </div>
 
@@ -40,6 +40,8 @@ import type { MessageSchema } from '../i18n/message_schema'
 const { t, locale } = useI18n<{ message: MessageSchema, locale: 'zh' | 'en' }>();
 const isZh = computed(() => locale.value == 'zh');
 const selectedIndexRef = ref(0);
+const certImageHoverIndex = ref(-1);
+
 const onBannerItemClick = (index: number) => {
     selectedIndexRef.value = index;
     visible.value = true;
@@ -49,6 +51,18 @@ const visible = ref(false)
 
 const onPreviewClose = () => {
     visible.value =  false;
+}
+
+const onSeriesBannerItemMouseenter = (index: number) => {
+    certImageHoverIndex.value = index;
+}
+
+const onSeriesBannerItemMouseleave = () => {
+    certImageHoverIndex.value = -1;
+}
+
+const onCertTextClick = (index: number) => {
+    selectedIndexRef.value = index;
 }
 
 const images = [
@@ -135,7 +149,7 @@ const images = [
                     cursor: pointer;
                     transition: transform 0.3s ease; /* 添加平滑过渡效果 */
                 }
-                .cert-img:hover {
+                .cert-img-active {
                     transform: scale(1.1); /* 图片放大2倍 */
                 }
             }
@@ -167,6 +181,10 @@ const images = [
                 position: relative;
                 margin-bottom: 40px;
                 color: #777777;
+                cursor: pointer;
+            }
+            .name-text-active {
+                color: var(--primary);
             }
             .name-text::after {
                 content: "";
@@ -177,6 +195,17 @@ const images = [
                 height: 10px;
                 border-radius: 5px;
                 background-color: #777777;
+            }
+            .name-text-active::after {
+                background-color: var(--primary);
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 9px;
+                width: 10px;
+                height: 10px;
+                border-radius: 5px;
+                background-color: var(--primary);
             }
         }
         .cert-name-list::after {

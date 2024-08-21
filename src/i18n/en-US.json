@@ -42,11 +42,11 @@
     },
     "series": {
         "title": "CURRENT PRODUCT LINE",
-        "series1": "H series water cooling",
-        "series2": "H series oil cooling",
-        "series3": "GH series water cooling",
-        "series4": "LK series oil cooled",
-        "series5": "JZ series oil cooled"
+        "series1": "H series water-cooled",
+        "series2": "H series oil lubricated",
+        "series3": "GH series water-cooled",
+        "series4": "LK series oil lubricated",
+        "series5": "JZ series oil lubricated"
     },
     "introduce": {
         "title": "CORPORATION",

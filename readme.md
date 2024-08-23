@@ -1,68 +1,18 @@
-# vue3-quick-start
+# 文案修改
+- 文案目录位于 英文文案: src/i18n/en-US.json 中文文案: src/i18n/zh-CN.json
 
-English | [简体中文](https://github.com/wforguo/vue3-quick-start/blob/master/readme.zh-CN.md)
 
-This template should help get you started developing with Vue 3 in Vite.
+# 图片替换
+- 图片目录位于 assets/images/
+- 视频目录位于 assets/videos/
+> 图片替换 注意保持文件名和文件格式一致
 
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+# 本地调试
+> npm run dev 脚本可以本地调试预览
 
-[start guide](https://forguo.cn/f2e/%E5%B7%A5%E7%A8%8B%E5%8C%96/Vue3%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA.html)
-
-## vite config
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## start
-
-```sh
-pnpm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-pnpm dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-pnpm build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-pnpm test:unit
-```
-
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
-
-```sh
-pnpm test:e2e:dev
-```
-
-This runs the end-to-end tests against the Vite development server. It is much faster than the production build.
-
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
-
-```sh
-pnpm build
-pnpm test:e2e
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
-```
-
-## debug
-
-[eruda](https://github.com/liriliri/eruda)
-
-Opening method [modify variables or opening method as needed]
-
-Add after link: `?debug=true`
-
-such as: [http://127.0.0.1:5000/?debug=true](http://127.0.0.1:5000/?debug=true)
+# 生产部署
+* 打包: npm run build 会构建出dist文件夹
+* 上传: 通过 git 上传代码或者ssh copy代码到云服务器中  
+* 部署: (部署前需要删除之前旧的容器和镜像)
+  - docker build -t unicorn . (docker 构建镜像)
+  - docker run -d -p 80:80 -p 443:443 unicorn (docker 运行容器)

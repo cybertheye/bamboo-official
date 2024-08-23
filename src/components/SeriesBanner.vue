@@ -29,7 +29,7 @@
 
         <vue-easy-lightbox
             :visible="visible"
-            :imgs="seriesProductData.map(item => item.detailImg)"
+            :imgs="seriesProductData.map(item => isZh?item.detailImg:item.enDetailImg)"
             :index="previewIndexRef"
             @hide="onPreviewClose"
         />
@@ -41,6 +41,8 @@ import { useI18n } from 'vue-i18n';
 import type { MessageSchema } from '../i18n/message_schema'
 import {useTechProcessDataHook} from "@/hooks/useTechProcessDataHook";
 const { t } = useI18n<{ message: MessageSchema }>();
+const { locale } = useI18n<{ locale: 'zh' | 'en' }>();
+const isZh = computed(() => locale.value == 'zh');
 const { seriesProductData } = useTechProcessDataHook();
 const selectedIndexRef = ref(-1);
 const previewIndexRef = ref(-1);

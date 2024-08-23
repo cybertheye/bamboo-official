@@ -20,11 +20,13 @@ export class SeriesProductMediaModel {
 
     img: string;
     detailImg: string | null;
+    enDetailImg: string | null;
     name: string;
 
-    constructor(img: string, detailImg: string | null, name: string) {
+    constructor(img: string, detailImg: string | null, enDetailImg: string | null, name: string) {
         this.img = img;
         this.name = name;
+        this.enDetailImg = enDetailImg;
         this.detailImg = detailImg;
     }
 }
@@ -83,11 +85,11 @@ export const useTechProcessDataHook = () => {
 
 
     const seriesProductData = computed(() => [
-        new SeriesProductMediaModel(new URL('@/assets/images/series/preview_series01.png', import.meta.url).href, new URL('@/assets/images/series/01-H.jpg', import.meta.url).href, t('series.series1')),
-        new SeriesProductMediaModel(new URL('@/assets/images/series/preview_series02.png', import.meta.url).href, new URL('@/assets/images/series/02-H.jpg', import.meta.url).href, t('series.series2')),
-        new SeriesProductMediaModel(new URL('@/assets/images/series/preview_series03.png', import.meta.url).href, new URL('@/assets/images/series/03-GH.jpg', import.meta.url).href, t('series.series3')),
-        new SeriesProductMediaModel(new URL('@/assets/images/series/preview_series04.png', import.meta.url).href, new URL('@/assets/images/series/04-LK.jpg', import.meta.url).href, t('series.series4')),
-        new SeriesProductMediaModel(new URL('@/assets/images/series/preview_series05.png', import.meta.url).href, new URL('@/assets/images/series/05-JZ.jpg', import.meta.url).href, t('series.series5')),
+        new SeriesProductMediaModel(new URL('@/assets/images/series/preview_series01.png', import.meta.url).href, new URL('@/assets/images/series/01-H.jpg', import.meta.url).href, new URL('@/assets/images/series/01-H-en.jpg', import.meta.url).href, t('series.series1')),
+        new SeriesProductMediaModel(new URL('@/assets/images/series/preview_series02.png', import.meta.url).href, new URL('@/assets/images/series/02-H.jpg', import.meta.url).href, new URL('@/assets/images/series/02-H-en.jpg', import.meta.url).href, t('series.series2')),
+        new SeriesProductMediaModel(new URL('@/assets/images/series/preview_series03.png', import.meta.url).href, new URL('@/assets/images/series/03-GH.jpg', import.meta.url).href, new URL('@/assets/images/series/03-GH-en.jpg', import.meta.url).href, t('series.series3')),
+        new SeriesProductMediaModel(new URL('@/assets/images/series/preview_series04.png', import.meta.url).href, new URL('@/assets/images/series/04-LK.jpg', import.meta.url).href, new URL('@/assets/images/series/04-LK-en.jpg', import.meta.url).href, t('series.series4')),
+        new SeriesProductMediaModel(new URL('@/assets/images/series/preview_series05.png', import.meta.url).href, new URL('@/assets/images/series/05-JZ.jpg', import.meta.url).href, new URL('@/assets/images/series/05-JZ-en.jpg', import.meta.url).href, t('series.series5')),
     ]);
 
     return {

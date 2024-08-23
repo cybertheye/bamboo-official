@@ -30,14 +30,14 @@
     },
     "tech": {
         "title": "MAIN PROCESSING",
-        "process1": "BOX PROCESSING",
-        "process1Html": "In order to <span class='highlight'>ensure </span><span class='highlight'>accuracy</span>, all boxes are finished using <span class='highlight'>a </span><span class='highlight'>horizontal </span><span class='highlight'>machining </span><span class='highlight'>center.</span> After processing, the concentricity of each box is measured, as well as the bearing position tolerance, and <span class='highlight'>the </span> <span class='highlight'>defective </span> <span class='highlight'>products </span> <span class='highlight'>are </span> <span class='highlight'>eliminated.</span>",
-        "process2": "AIR TIGHTNESS TEST",
-        "process2Html": "After processing by the processing center, in order to <span class='highlight'>ensure </span><span class='highlight'>no </span><span class='highlight'>oil </span><span class='highlight'>leakage </span><span class='highlight'>and </span><span class='highlight'>no </span><span class='highlight'>water </span><span class='highlight'>leakage</span> during subsequent use, each box is tested by special equipment for water compression, <span class='highlight'>air tightness test</span>, full inspection of all semi-finished products, <span class='highlight'>and </span><span class='highlight'>the </span><span class='highlight'>elimination </span><span class='highlight'>of </span><span class='highlight'>defective </span><span class='highlight'>products</span>",
-        "process3": "END FINISH",
-        "process3Html": "In order to prevent oil from spilling from both sides, the end cover uses the structure of skeleton oil seal + return oil groove + oil dump ring, as shown in the diagram",
-        "process4": "SPINDLE MACHINING",
-        "process4Html": "The default spindle material is 45# steel, which is initially processed with a lathe and then processed with a grinder to achieve the accuracy requirements",
+        "process1": "HOUSING PROCESSING",
+        "process1Html": "We are committed to produce <span class='highlight'>high-quality products</span>. In order to ensure accuracy, all housings are finished with <span class='highlight'>horizontal machining center</span>, before next step, we'll <span class='highlight'>measure the concentricity of each housing</span>, and eliminate the defective products to ensure there will be <span class='highlight'>no abnormal sound</span> during application",
+        "process2": "TIGHTNESS TEST",
+        "process2Html": "After step 1, all housings are going through the <span class='highlight'>pressure test in water</span> by a special equipment, this is a <span class='highlight'>full inspection</span>, and all defective products are eliminated to ensure there will be <span class='highlight'>no leakage</span> during application",
+        "process3": "END COVER STRUCTURE",
+        "process3Html": "Please click the diagram for detail",
+        "process4": "SHAFT PROCESSING",
+        "process4Html": "We <span class='highlight'>lathing</span> the shafts first, then <span class='highlight'>grinding</span> to ensure accuracy",
         "process5": "INTEGRAL ASSEMBLY"
     },
     "series": {
@@ -49,9 +49,9 @@
         "series5": "JZ series oil lubricated"
     },
     "introduce": {
-        "title": "CORPORATION",
+        "title": "MANUFACTORY",
         "subTitle": "WE MAKE AND ONLY MAKE FAN BEARING HOUSING",
-        "content1": "Taizhou Unicorn Co., Ltd. is a professional production of fan bearing box enterprises, the company is located in the \"China pump town\" title of industrial strong town - Daxi town. For a long time, the company has devoted itself to research, with more professional technology, greater investment and continuous innovation to face the market competition. The company has always adhered to the \"quality of survival, science and technology and development\" business policy, the integrity of the business philosophy is the goal of Mottled electromechanical, the company developed a fuel-saving bearing box won the utility model patent certificate. ",
+        "content1": "Taizhou Unicorn Electromechanical Co., Ltd. is a professional manufacturer of fan bearing housing. the company is located in the \"China pump town\" title of industrial strong town - Daxi town. For a long time, the company has devoted itself to research, with more professional technology, greater investment and continuous innovation to face the market competition. The company has always adhered to the \"quality of survival, science and technology and development\" business policy, the integrity of the business philosophy is the goal of Mottled electromechanical, the company developed a fuel-saving bearing box won the utility model patent certificate. ",
         "content2": "Our factory has established long-term and stable cooperative relations with a number of Taizhou companies, heavy credit, keep the contract, ensure product quality, and won the trust of our customers, the factory fully follow customer needs, and constantly carry out product innovation and service improvement. ",
         "content3": "In order to prolong the service life of the bearing box as much as possible, it is necessary to fill the mechanical oil inside the bearing to lubricate the bearing, but we found that the process of filling the oil is actually quite long, and the amount of oil used is also very large, so in this regard, our company developed a fuel-saving bearing box structure, and has applied for a utility patent. The technology is to change the structure of the box (add steps at the bottom of the box to lock the filled oil near the bearings at both ends; At the same time, increase the oil injection hole and move its position to both ends) to achieve the purpose of reducing the oil use and the oil injection time, and ultimately it is expected to reduce the oil use by 50% and the oil injection time by 75%."
     },

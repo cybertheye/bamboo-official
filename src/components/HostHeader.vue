@@ -78,6 +78,13 @@ const props = defineProps<{ showAboutUs: boolean, showTechIntro: boolean}>()
         cursor: pointer;
         user-select: none;
     }
+    .logoside{
+        font-size: 17px;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        user-select: none;
+    }
     .title-container {
         position: absolute;
         left: 0;

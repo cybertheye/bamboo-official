@@ -25,7 +25,7 @@
 
         <vue-easy-lightbox
             :visible="visible"
-            :imgs="seriesProductData.map(item => item.detailImg)"
+            :imgs="seriesProductData.map(item => isZh? item.detailImg : item.enDetailImg )"
             :index="previewIndexRef"
             @hide="onPreviewClose"
         />
@@ -42,7 +42,8 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import 'swiper/css';
 const swiperRef = ref<any | null>(null)
 const activeIndexRef = computed(() => swiperRef.value == null ? 0 : swiperRef.value.activeIndex);
-
+const { locale } = useI18n<{ locale: 'zh' | 'en' }>();
+const isZh = computed(() => locale.value == 'zh');
 const { seriesProductData } = useTechProcessDataHook();
 const selectedIndexRef = ref(-1);
 const previewIndexRef = ref(-1);

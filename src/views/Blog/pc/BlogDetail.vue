@@ -66,7 +66,7 @@ const renderContent = async () => {
     try {
       // 根据当前语言选择正确的文件
       const fileName = locale.value === 'zh' ? post.value.file : post.value.file.replace('-zh.md', '-en.md');
-      const response = await fetch(`/src/assets/blog/${fileName}`);
+      const response = await fetch(`/blogmd/${fileName}`);
       const markdown = await response.text();
       
       // 重置 TOC
@@ -88,6 +88,7 @@ const renderContent = async () => {
       renderedContent.value = await marked(markdown, { renderer });
     } catch (error) {
       console.error('Error loading blog content:', error);
+      renderedContent.value = 'Error loading blog content';
     }
   }
 };

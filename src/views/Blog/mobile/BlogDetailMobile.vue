@@ -50,7 +50,12 @@ function generateId(text: string): string {
     .replace(/^-+/, '')
     .replace(/-+$/, '');
 }
-const toc = ref([]);
+interface TocItem { 
+  anchor: string;
+  level: number;
+  text: string;
+}
+const toc = ref<TocItem[]>([]);
 
 const renderContent = async () => {
   if (post.value) {

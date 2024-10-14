@@ -53,7 +53,12 @@ function generateId(text: string): string {
     .replace(/^-+/, '')         // 去掉开头的连字符
     .replace(/-+$/, '');        // 去掉结尾的连字符
 }
-const toc = ref([]);
+interface TocItem {   
+  anchor: string;
+  level: number;
+  text: string;
+}
+const toc = ref<TocItem[]>([]);
 
 // 提取渲染逻辑到单独的函数
 const renderContent = async () => {

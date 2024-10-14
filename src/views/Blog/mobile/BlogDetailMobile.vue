@@ -61,7 +61,7 @@ const renderContent = async () => {
   if (post.value) {
     try {
       const fileName = locale.value === 'zh' ? post.value.file : post.value.file.replace('-zh.md', '-en.md');
-      const response = await fetch(`/src/assets/blog/${fileName}`);
+      const response = await fetch(`/blogmd/${fileName}`);
       const markdown = await response.text();
       
       toc.value = [];

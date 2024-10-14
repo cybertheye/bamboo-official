@@ -44,6 +44,11 @@ The review process there has strict requirements. For example, one rejection was
 
 After multiple revisions, the Certificate of Origin application was finally approved. **Additionally, before submission, it's advisable to communicate with the customer about any necessary changes. For instance, in this case, after experiencing three days of multiple application rejections and modifications, and finally succeeding, the customer added port information details and changed the goods description, resulting in us having to reapply.**
 
+> Our fan bearing housing's HS code is 8483200000.
+> The official definition is: Bearing housing with ball or roller bearings.
+> It belongs to the category: Transmission shafts (including cam shafts and crank shafts) and cranks; bearing housings and plain shaft bearings; gears and gearing; ball or roller screws; gear boxes and other speed changers, including torque converters; flywheels and pulleys, including pulley blocks; clutches and shaft couplings (including universal joints):
+
+
 # Customer Receipt of Goods
 
 On the premise of receiving full payment, when the ship arrives at the port, the current practice is to use telex release to confirm the release of goods. However, this part is the responsibility of the designated freight forwarder, and they will naturally inquire about it.

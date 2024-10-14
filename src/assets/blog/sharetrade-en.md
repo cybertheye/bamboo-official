@@ -6,7 +6,7 @@ Special thanks to: Lucy for her patient guidance throughout the process, truly i
 
 First, let's take a look at a sequence diagram to get an overview of our order process:
 
-![Foreign Trade Order Sequence Diagram](/src/assets/images/blog/trade1.png)
+![Foreign Trade Order Sequence Diagram](/images/blog/trade1.png)
 
 # Order Background
 
@@ -28,9 +28,9 @@ At this point, the advance payment is successfully received, the production plan
 
 After finalizing the production process, the factory worked overtime to complete the preparation of goods to ensure that customers could receive the goods as soon as possible. Upon receiving photos of the prepared goods, the customer quickly paid the balance, and we entered the container loading stage. Due to lack of experience in container loading, we used CAD software to simulate the packing of goods, ensuring that boxes of different sizes could be reasonably arranged in the container.
 
-![Before Container Loading](/src/assets/images/blog/trade2.JPG)
+![Before Container Loading](/images/blog/trade2.JPG)
 
-![After Container Loading](/src/assets/images/blog/trade3.JPG)
+![After Container Loading](/images/blog/trade3.JPG)
 
 The next steps include providing customs declaration documents and authorizing the freight forwarder to handle customs clearance. This part involves numerous documents and materials, which we will elaborate on in the future.
 
@@ -55,7 +55,7 @@ On the premise of receiving full payment, when the ship arrives at the port, the
 
 > Telex Release: Also known as electronic release. It involves sending bill of lading information to the destination port shipping company via electronic message or information. The consignee can exchange documents and collect goods with the telex released bill of lading stamped with the telex release seal and the telex release guarantee. It refers to a bill of lading issued by the shipping company or its agent marked with "Surrendered, Telex Release".
 
-![Customer Receiving Goods](/src/assets/images/blog/trade4.JPG)
+![Customer Receiving Goods](/images/blog/trade4.JPG)
 As the customer shared photos of receiving the goods on social media, the order process officially concluded. Through this foreign trade order operation, we not only successfully completed our first foreign trade order but also accumulated valuable foreign trade experience in practical operations.
 
 # Conclusion

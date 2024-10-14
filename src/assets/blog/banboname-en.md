@@ -6,11 +6,11 @@ This question has been asked quite frequently, so let's officially address it th
 
 This character is considered the simplified form of "駮". Baidu provides the following evolution of the character:
 
-![Character Evolution](/src/assets/images/blog/banboname1.png)
+![Character Evolution](/images/blog/banboname1.png)
 
 In the "Classic of Mountains and Seas", "駮" is described as: "There is a beast, its form is like a horse with a white body and black tail, one horn, tiger teeth and claws, its sound is like a drum, its name is Bo, it eats tigers and leopards, and can be used to defend against armies." (Western Mountains Classic, Fourth Western Classic). So "Bo" is actually a unicorn-like horse that stands at the top of the food chain (which is why I used "unicorn" instead of "bamboo" when translating the company's English name).
 
-![Bo](/src/assets/images/blog/banboname2.png)
+![Bo](/images/blog/banboname2.png)
 
 ## "Ban", Taking Its Adjectival Meaning
 

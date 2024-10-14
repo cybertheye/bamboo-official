@@ -1,6 +1,6 @@
 <template>
   <div class="blog-detail-container">
-    <HostHeader :show-about-us="false" :show-tech-intro="true" />
+    <HostHeader :show-about-us="true" :show-tech-intro="false" />
     <div class="blog-content-wrapper" v-if="post">
       <div class="blog-detail">
         <h1 class="blog-title">{{ post.title }}</h1>

@@ -8,7 +8,7 @@ As the core transmission component of C-type and D-type centrifugal fans, if a b
 
 Based on our production experience and customer feedback, we have summarized two main categories of problems that bearing boxes tend to develop after being put into use: noise and leakage. The causes of these two issues are multifaceted, and consequently, the corresponding solutions vary. It's difficult to explain thoroughly in just a few words, so I will prepare a separate article later, mainly discussing the causes of abnormal noise, oil leakage, and water leakage, as well as how we prevent these issues through our manufacturing processes. Below is an image of substandard semi-finished products:
 
-![Substandard semi-finished products](/src/assets/images/blog/whyus1.jpg)
+![Substandard semi-finished products](/images/blog/whyus1.jpg)
 
 **In short, we ensure our quality has quality!**
 
@@ -23,31 +23,31 @@ Building upon the simple appearance long used by our predecessors, we have added
 
 (A new water-cooled appearance is currently in the conceptual stage, coming soon~)
 
-![Water-cooled appearance patent](/src/assets/images/blog/whyus2.png)
+![Water-cooled appearance patent](/images/blog/whyus2.png)
 
-![Oil-cooled appearance patent](/src/assets/images/blog/whyus3.png)
+![Oil-cooled appearance patent](/images/blog/whyus3.png)
 
-![H series water-cooled](/src/assets/images/blog/whyus4.png)
+![H series water-cooled](/images/blog/whyus4.png)
 
-![H series oil-cooled](/src/assets/images/blog/whyus5.png)
+![H series oil-cooled](/images/blog/whyus5.png)
 
 **In short, we ensure our aesthetics have aesthetics!**
 
 > Additionally, I'd like to elaborate on the design meaning of our own logo: on one hand, it corresponds to the product, representing a top view of the bearing box assembly; on the other hand, it relates to the individual: it's a side view of a four-legged square "ding" (ancient Chinese vessel)
 
-![logo](/src/assets/images/blog/whyus6.jpg)
+![logo](/images/blog/whyus6.jpg)
 
 # Customer-Friendly
 
 - Free logo printing (minimum order quantity applies, long-term customers can have stock prepared)
 
-![Logo printing](/src/assets/images/blog/whyus7.jpg)
+![Logo printing](/images/blog/whyus7.jpg)
 - Support for non-standard spindle customization (one-on-one technical support, pre-order drawing confirmation, production according to drawings)
 
-![Non-standard customization](/src/assets/images/blog/whyus8.jpg)
+![Non-standard customization](/images/blog/whyus8.jpg)
 - To protect goods, we provide free wooden pallet packaging services for out-of-town customers
 
-![Wooden pallet packaging](/src/assets/images/blog/whyus9.jpg)
+![Wooden pallet packaging](/images/blog/whyus9.jpg)
 - Feel free to make any other reasonable requests, we will do our utmost to fulfill them~
 
 **In short, we ensure our service has service!**

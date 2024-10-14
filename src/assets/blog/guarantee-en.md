@@ -43,9 +43,9 @@ First, we re-inquired with Customer A and confirmed that the fan in Case A was a
 
 Now that we had found the source of water, the next step was to determine how it entered. Carefully observing the upper surface of the bearing housing, there was only one oil filling hole connected to the interior. At this point, a detail discovered during the disassembly of the returned product in Case A suddenly came to mind: **The middle part of the main shaft had obvious rust marks!** With this evidence, we could deduce the water entry path, although it seemed incredible: **"The water entered through the vent hole on the side of the oil filling screw."**
 
-![Old style screw](/src/assets/images/blog/g1.jpg)
+![Old style screw](/images/blog/g1.jpg)
 
-![Rainwater flow direction](/src/assets/images/blog/g2.png)
+![Rainwater flow direction](/images/blog/g2.png)
 
 The structure of this screw is hollow, with a hole on the side acting as a vent. **If the fan is left outdoors for a long time without use, rainwater will slowly enter the bearing housing through this hole.** Over time, the amount of water becomes considerable! **After sunny days, with direct sunlight outdoors, the temperature rises, and the accumulated water inside the housing evaporates into steam, causing the bearings to rust.** Cases A, B, and C all fall into this category, while Case D demonstrates the importance of **regularly changing the oil**.
 
@@ -58,15 +58,15 @@ Although the probability of occurrence is low, fans used outdoors for long perio
 
 **This is our designed "umbrella-shaped oil filling vent screw"**
 
-![Schematic diagram of umbrella-shaped oil filling vent screw](/src/assets/images/blog/g3.png)
+![Schematic diagram of umbrella-shaped oil filling vent screw](/images/blog/g3.png)
 
 With the concept sketch ready, the next step was implementation. Anyone can boast, but the key is to actually produce it:
 
-![Umbrella-shaped oil filling vent screw](/src/assets/images/blog/g4.jpg)
+![Umbrella-shaped oil filling vent screw](/images/blog/g4.jpg)
 
 This is the application diagram. How about that? We deliver on our promises, demonstrating our pursuit of quality.
 
-![Application of umbrella-shaped oil filling vent screw](/src/assets/images/blog/g5.jpg)
+![Application of umbrella-shaped oil filling vent screw](/images/blog/g5.jpg)
 
 # Water Leakage
 
@@ -92,7 +92,7 @@ To address this situation, first, to prevent oil seal wear due to friction betwe
 
 Then we focus on improving the end cover. Below is the structure diagram of our end cover:
 
-![End cover structure diagram](/src/assets/images/blog/g6.png)
+![End cover structure diagram](/images/blog/g6.png)
 
 Finally, there's the choice of oil seal material. The basic option is nitrile rubber, while the **high-end option is fluorine rubber.**
 

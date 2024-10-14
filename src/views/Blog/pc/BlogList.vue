@@ -1,6 +1,6 @@
 <template>
     <div class="blog-list-container">
-        <HostHeader :show-about-us="false" :show-tech-intro="true" />
+        <HostHeader :show-about-us="true" :show-tech-intro="false" />
         <div class="blog-list">
             <div class="featured-post" @click="goToBlogDetail(featuredPost.id)">
                 <div class="featured-image">

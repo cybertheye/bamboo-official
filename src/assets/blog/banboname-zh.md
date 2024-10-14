@@ -6,11 +6,11 @@
 
 这个字，算是“駮”的简体字，百度上给出的字源演变：
 
-![字体演变](/src/assets/images/blog/banboname1.png)
+![字体演变](/images/blog/banboname1.png)
 
 而在《山海经》中呢，对“駮”的描述：“有兽焉，其状如马而白身黑尾，一角，虎牙爪，音如鼓音，其名曰駮，是食虎豹，可以御兵。”（西山经·西次四经）。所以“驳”其实算是一匹站在食物链上层的马状独角兽（这也是我在翻译公司英文名时用“unicorn”而不是“bamboo”的原因）
 
-![驳](/src/assets/images/blog/banboname2.png)
+![驳](/images/blog/banboname2.png)
 
 ## “斑”，取其形容词之意
 

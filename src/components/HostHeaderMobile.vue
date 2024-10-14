@@ -6,6 +6,7 @@
             <img id="exchange-language" :src="getImageImport(isZh ? 'language_zh.png' : 'language_en.png')" @click="onExchangeLanguageClick" alt="切换语言">
             <div v-if="props.showAboutUs" class="join-us" @click="onJoinUsClick">{{ t('common.aboutUs')  }}</div>
             <div v-if="props.showTechIntro" class="join-us" @click="onTechIntroClick">{{ t('common.techIntro')  }}</div>
+            <div class="join-us" @click="onBlogClick">{{ t('common.blog')  }}</div>
             <div id="interest" @click="onInterestClick">{{ t('common.interest')  }}</div>
         </div>
 
@@ -52,6 +53,12 @@ const onExchangeLanguageClick = () => {
 const onTitleClick = () => {
     router.push({
         name: 'home'
+    })
+}
+
+const onBlogClick = () => {
+    router.push({
+        name: 'blog'
     })
 }
 

@@ -12,7 +12,9 @@
         "addWechat": "添加微信",
         "emailTitlePlaceholder": "询问并结交朋友…",
         "wechat": "公司微信",
-        "clickDetail": "点击查看详情"
+        "clickDetail": "点击查看详情",
+        "blog": "博客",
+        "back": "返回"
     },
     "company": {
         "name": "台州斑驳机电有限公司",
@@ -61,5 +63,58 @@
         "cert1": "外观设计专利证书",
         "cert2": "商标注册证",
         "cert3": "实用新型专利证书"
+    },
+    "blog": {
+        "hotarticle": "热门文章",
+        "read": "阅读",
+        "toc": "目录",
+        "latest": "最新",
+        "posts":[
+            {
+                "id": 1,
+                "title": "​斑驳名字起源",
+                "date": "2022-01-12",
+                "summary": "斑驳，其实我们的 斑驳 并不是经常用的那个形容词，而是名词，它的寓意，是希望公司能成为一匹不畏虎豹（竞争对手）、一路走下去的独角兽！",
+                "views": 1000,
+                "file": "banboname-zh.md",
+                "imageUrl": "/src/assets/images/blog/banboname1.png"
+            },
+            {
+                "id": 2,
+                "title": "为什么选择我们",
+                "date": "2022-05-02",
+                "summary": "我们将从品质、设计、服务三个方面来介绍我们",
+                "views": 2000,
+                "file": "whyus-zh.md",
+                "imageUrl": "/src/assets/images/blog/whyus6.jpg"
+            },
+            {
+                "id": 3,
+                "title": "我们的保障措施",
+                "date": "2023-02-20",
+                "summary": "这篇文章介绍了轴承箱使用过程中常见的问题以及我们采取的预防措施。",
+                "views": 3000,
+                "file": "guarantee-zh.md",
+                "imageUrl": "/src/assets/images/blog/g3.png"
+            },
+            {
+                "id": 4,
+                "title": "常见问题",
+                "date": "2024-02-20",
+                "summary": "这里我们回答一些客户常见的问题",
+                "views": 1400,
+                "file": "faq1-zh.md",
+                "imageUrl": "/src/assets/images/logo.jpg"
+            },
+            {
+                "id": 5,
+                "title": "国际订单流程分享",
+                "date": "2024-10-08",
+                "summary": "这篇文章介绍了从订单确认到客户收货的国际订单流程。",
+                "views": 2400,
+                "file": "sharetrade-zh.md",
+                "imageUrl": "/src/assets/images/blog/trade1.png"
+            }
+        ]
     }
 }

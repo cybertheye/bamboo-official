@@ -12,7 +12,9 @@
         "emailTitlePlaceholder": "Inquire and make friends…",
         "addWechat": "Add wechat",
         "wechat": "Wechat",
-        "clickDetail": "click for detail"
+        "clickDetail": "click for detail",
+        "blog": "Blog",
+        "back": "Back"
     },
     "company": {
         "name": "Taizhou Unicorn Electromechanical Co., Ltd",
@@ -61,5 +63,58 @@
         "cert1": "Design Patent Certificate",
         "cert2": "Trademark Registration Certificate",
         "cert3": "Utility Model Patent Certificate"
+    },
+    "blog" : {
+        "toc": "Table of Contents",
+        "hotarticle": "Hot Article",
+        "read": "Read",
+        "latest": "Latest",
+        "posts":[
+            {
+                "id": 1,
+                "title": "The Origin of the Name 'Banbo'",
+                "date": "2022-01-12",
+                "summary": "Banbo, in fact, our 'Banbo' is not the commonly used adjective, but a noun. Its meaning is to hope that the company can become a unicorn that is not afraid of tigers and leopards (competitors) and continues on its journey!",
+                "views": 1000,
+                "file": "banboname-en.md",
+                "imageUrl": "/src/assets/images/blog/banboname1.png"
+            },
+            {
+                "id": 2,
+                "title": "Why Us",
+                "date": "2022-05-02",
+                "summary": "We will introduce our company from the aspects of quality, design, and service.",
+                "views": 2000,
+                "file": "whyus-en.md",
+                "imageUrl": "/src/assets/images/blog/whyus6.jpg"
+            },
+            {
+                "id": 3,
+                "title": "Our Guarantee Measures",
+                "date": "2023-02-20",
+                "summary": "This article introduces the common problems in the use of bearing housings and the preventive measures we have taken.",
+                "views": 3000,
+                "file": "guarantee-en.md",
+                "imageUrl": "/src/assets/images/blog/g3.png"
+            },
+            {
+                "id": 4,
+                "title": "FAQ",
+                "date": "2024-02-20",
+                "summary": "Here we answer some common questions from customers",
+                "views": 1400,
+                "file": "faq1-en.md",
+                "imageUrl": "/src/assets/images/logo.jpg"
+            },
+            {
+                "id": 5,
+                "title": "International Order Process Sharing",
+                "date": "2024-10-08",
+                "summary": "This article introduces the process of completing a foreign trade order from order confirmation to customer receipt of goods.",
+                "views": 2400,
+                "file": "sharetrade-en.md",
+                "imageUrl": "/src/assets/images/blog/trade1.png"
+            }
+        ]
     }
 }

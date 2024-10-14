@@ -8,6 +8,7 @@
         <img class="exchange-language" :src="getImageImport(isZh ? 'language_zh.png' : 'language_en.png')" @click="onExchangeLanguageClick" alt="切换语言">
         <div v-if="props.showAboutUs" class="join-us" @click="onJoinUsClick">{{ t('common.aboutUs')  }}</div>
         <div v-if="props.showTechIntro" class="join-us" @click="onTechIntroClick">{{ t('common.techIntro')  }}</div>
+        <div class="join-us" @click="onBlogClick">{{ t('common.blog')  }}</div>
         <div id="interest" @click="onInterestClick">{{ t('common.interest')  }}</div>
     </div>
 </template>
@@ -48,6 +49,12 @@ const onExchangeLanguageClick = () => {
 const onTitleClick = () => {
     router.push({
         name: 'home'
+    })
+}
+
+const onBlogClick = () => {
+    router.push({
+        name: 'blog'
     })
 }
 
@@ -97,6 +104,7 @@ const props = defineProps<{ showAboutUs: boolean, showTechIntro: boolean}>()
         align-items: center;
         z-index: -1;
         .title-text {
+            margin-top: 10px;
             font-size: 24px;
             font-weight: 400;
             cursor: pointer;
@@ -118,7 +126,8 @@ const props = defineProps<{ showAboutUs: boolean, showTechIntro: boolean}>()
         width: 122px;
         height: 48px;
         flex-basis: 122px;
-        margin-left: 20px;
+        margin-left: 10px;
+        border-radius: 10px;
         background-color: var(--primary);
         color: var(--white);
         font-size: 20px;
@@ -136,6 +145,7 @@ const props = defineProps<{ showAboutUs: boolean, showTechIntro: boolean}>()
         text-align: center;
         line-height: 48px;
         border: 1px solid var(--primary);
+        border-radius: 5px;
         color: var(--primary);
         margin-left: 10px;
         cursor: pointer;

@@ -21,6 +21,7 @@ Thanks for your time.
 
 
 > LK-375W : Model LK-375 water-cooled
+
 > LK-375O : Model LK-375 oil-lubricated
 
 ## Detail

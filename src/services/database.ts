@@ -19,11 +19,6 @@ db.exec(`
   );
 `)
 
-// Insert sample data if table is empty
-const count = db.prepare('SELECT COUNT(*) as count FROM quotes').get().count
-if (count === 0) {
-  const insert = db.prepare('INSERT OR IGNORE INTO quotes (code, file_path) VALUES (?, ?)')
-  insert.run('12345', 'src/assets/quotes/12345.md')
-}
+
 
 export default db

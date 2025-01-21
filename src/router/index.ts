@@ -9,9 +9,12 @@ import BlogList from "@/views/Blog/pc/BlogList.vue";
 import BlogListMobile from '@/views/Blog/mobile/BlogListMobile.vue';
 import BlogDetail from '@/views/Blog/pc/BlogDetail.vue';
 import BlogDetailMobile from '@/views/Blog/mobile/BlogDetailMobile.vue';
-import QuotePage from '@/views/Quote/Quote.vue';
-import QuoteDetailPage from '@/views/Quote/QuoteDetail.vue';
-import QuoteErrorPage from '@/views/Quote/QuoteError.vue';
+import QuotePage from '@/views/Quote/pc/Quote.vue';
+import QuoteDetailPage from '@/views/Quote/pc/QuoteDetail.vue';
+import QuoteErrorPage from '@/views/Quote/pc/QuoteError.vue';
+import QuotePageMobile from '@/views/Quote/mobile/Quote.vue';
+import QuoteDetailPageMobile from '@/views/Quote/mobile/QuoteDetail.vue';
+import QuoteErrorPageMobile from '@/views/Quote/mobile/QuoteError.vue';
 
 const isMobile = /Mobi|Android|iPhone/i.test(navigator.userAgent);
 

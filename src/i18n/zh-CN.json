@@ -116,5 +116,15 @@
                 "imageUrl": "/images/blog/trade1.png"
             }
         ]
+    },
+    "quote": {
+        "title": "报价授权",
+        "placeholder": "请输入授权码",
+        "submit": "提交",
+        "error": {
+            "title": "无效的报价授权",
+            "message": "此代码无效，或者您没有访问此报价的权限。请联系我们获取正确的代码",
+            "back": "返回"
+        }
     }
 }

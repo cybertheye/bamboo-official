@@ -9,6 +9,9 @@ import BlogList from "@/views/Blog/pc/BlogList.vue";
 import BlogListMobile from '@/views/Blog/mobile/BlogListMobile.vue';
 import BlogDetail from '@/views/Blog/pc/BlogDetail.vue';
 import BlogDetailMobile from '@/views/Blog/mobile/BlogDetailMobile.vue';
+import QuotePage from '@/views/Quote/Quote.vue';
+import QuoteDetailPage from '@/views/Quote/QuoteDetail.vue';
+import QuoteErrorPage from '@/views/Quote/QuoteError.vue';
 
 const isMobile = /Mobi|Android|iPhone/i.test(navigator.userAgent);
 
@@ -40,7 +43,21 @@ const routes: (RouteRecordRaw | any)[] = [
         name: 'blog_detail',
         component: isMobile ? BlogDetailMobile : BlogDetail,
     },
-
+    {
+        path: '/quote',
+        name: 'quote',
+        component: isMobile ? QuotePageMobile : QuotePage,
+    },
+    {
+        path: '/quote/:code',
+        name: 'quote_detail',
+        component: isMobile ? QuoteDetailPageMobile : QuoteDetailPage,
+    },
+    {
+        path: '/quote/error',
+        name: 'quote_error',
+        component: isMobile ? QuoteErrorPageMobile : QuoteErrorPage,
+    },
 ]
 
 const router = createRouter({

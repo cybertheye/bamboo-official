@@ -116,5 +116,15 @@
                 "imageUrl": "/images/blog/trade1.png"
             }
         ]
+    },
+    "quote": {
+        "title": "Quote Query",
+        "placeholder": "Please enter authorization code",
+        "submit": "Submit",
+	"error":{
+	"title": "Invalid Quote Authorization",
+	"message": "This Code is invalid, or you don't have the authorization to visit this quote. Please contact us to reach the right code",
+	"back": "Back"
+}
     }
 }

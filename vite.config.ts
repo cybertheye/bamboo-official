@@ -1,5 +1,9 @@
 import { fileURLToPath, URL } from 'node:url'
 import { ConfigEnv, defineConfig, loadEnv } from 'vite'
+import { createServer } from 'http'
+import db from './src/services/database'
+import path from 'path'
+import fs from 'fs'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -81,7 +85,54 @@ export default (configEnv: ConfigEnv) => {
             }),
             // 环境变量
             VitePluginMetaEnv(metaEnv, 'import.meta.env'),
-            VitePluginMetaEnv(metaEnv, 'process.env')
+            VitePluginMetaEnv(metaEnv, 'process.env'),
+            {
+                name: 'custom-api',
+                configureServer(server) {
+                    const httpServer = createServer((req, res) => {
+
+                        if (req.url?.startsWith('/validate-quote/')) {
+                            const code = req.url.split('/').pop()
+                            const stmt = db.prepare('SELECT * FROM quotes WHERE code = ?')
+                            const quote = stmt.get(code)
+
+                            if (quote) {
+
+                                res.writeHead(200)
+                                res.end()
+                            } else {
+                                res.writeHead(404)
+                                res.end()
+                            }
+                        }
+
+                        if (req.url?.startsWith('/quote/')) {
+                            const code = req.url.split('/').pop()
+                            const stmt = db.prepare('SELECT file_path FROM quotes WHERE code = ?')
+                            const quote = stmt.get(code)
+
+                            if (quote) {
+                                try {
+                                    const filePath = path.join(__dirname, quote.file_path)
+
+                                    const content = fs.readFileSync(filePath, 'utf-8')
+
+                                    res.writeHead(200, { 'Content-Type': 'text/plain' })
+                                    res.end(content)
+                                } catch (error) {
+                                    res.writeHead(500)
+                                    res.end(error.message)
+                                }
+                            } else {
+                                res.writeHead(404)
+                                res.end()
+                            }
+                        }
+                    })
+
+                    httpServer.listen(5001)
+                }
+            }
         ],
         // 别名
         resolve: {
@@ -165,6 +216,13 @@ export default (configEnv: ConfigEnv) => {
             open: false,
             port: 5000,
             host: true,
+            proxy: {
+                '/api': {
+                    target: 'http://localhost:5001',
+                    changeOrigin: true,
+                    rewrite: (path) => path.replace(/^\/api/, '')
+                }
+            }
         }
     })
 }

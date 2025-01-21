@@ -43,17 +43,19 @@ const redirectToQuote = async () => {
     isLoading.value = true
     errorMessage.value = ''
 
-    const response = await fetch(`/api/validate-quote/${authCode.value}`)
+      const response = await fetch(`/api/validate-quote/${authCode.value}`)
+
+
     if (response.ok) {
       // 保存授权状态
       sessionStorage.setItem('quoteAuth', authCode.value)
-      
+
       // 清除重定向提示
       if (route.query.redirect) {
         delete route.query.redirect
         delete route.query.message
       }
-      
+
       router.push({ path: `/quote/${authCode.value}` })
     } else {
       throw new Error('Invalid code')

@@ -12,7 +12,7 @@
 
 # 生产部署
 * 打包: npm run build 会构建出dist文件夹
-* 上传: 通过 git 上传代码或者ssh copy代码到云服务器中  
+* 上传: 通过 git 上传代码或者ssh copy代码到云服务器中
 * 部署: (部署前需要删除之前旧的容器和镜像)
   - docker build -t unicorn . (docker 构建镜像)
   - docker run -d -p 80:80 -p 443:443 unicorn (docker 运行容器)

@@ -50,7 +50,8 @@ function generateId(text: string): string {
     .replace(/-+$/, '')
 }
 
-// 检查是否经过授权验证
+ // 检查是否经过授权验证
+ //需要在Quote.vue中保存这个状态
 const isAuthorized = () => {
   return sessionStorage.getItem('quoteAuth') === route.params.code
 }

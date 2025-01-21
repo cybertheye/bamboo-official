@@ -11,12 +11,8 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 // Create database directory if it doesn't exist
-const dbDir = path.join(__dirname, '../../data')
-if (!fs.existsSync(dbDir)) {
-  fs.mkdirSync(dbDir)
-}
-
-const db = new Database(path.join(dbDir, 'quotes.db'))
+// 使用容器内的固定路径
+const db = new Database('/app/data/quotes.db')
 
 
 

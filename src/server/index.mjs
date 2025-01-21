@@ -10,9 +10,19 @@ import Database from 'better-sqlite3'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-// Create database directory if it doesn't exist
-// 使用容器内的固定路径
-const db = new Database('/app/data/quotes.db')
+// 获取数据库路径，支持环境变量配置
+const dbPath = process.env.DATABASE_PATH || '/app/data/quotes.db'
+
+// 确保数据库文件存在
+try {
+  fs.accessSync(dbPath, fs.constants.R_OK | fs.constants.W_OK)
+  console.log(`Using database at: ${dbPath}`)
+} catch (err) {
+  console.error(`Database file not accessible at ${dbPath}:`, err)
+  process.exit(1)
+}
+
+const db = new Database(dbPath)
 
 
 

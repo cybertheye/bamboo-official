@@ -3,7 +3,7 @@
         <div class="title-container">
             <div @click="onTitleClick" class="title-text">{{ t('introduce.subTitle') }}</div>
         </div>
-        <img class="logo" src="../assets/images/logo.jpg" alt="logo" @click="onLogoClick">
+        <img class="logo" src="../assets/images/logo.jpg" alt="BANBO FAN BEARING HOUSING MANUFACTURER" @click="onLogoClick">
         <div class="spacer"></div>
         <img class="exchange-language" :src="getImageImport(isZh ? 'language_zh.png' : 'language_en.png')" @click="onExchangeLanguageClick" alt="切换语言">
         <div v-if="props.showAboutUs" class="join-us" @click="onJoinUsClick">{{ t('common.aboutUs')  }}</div>

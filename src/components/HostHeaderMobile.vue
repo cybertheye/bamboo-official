@@ -1,7 +1,7 @@
 <template>
     <div class="hots-header">
         <div class="top-container">
-            <img id="logo" src="../assets/images/logo.jpg" alt="logo" @click="onLogoClick">
+            <img id="logo" src="../assets/images/logo.jpg" alt="BANBO FAN BEARING HOUSING MANUFACTURER" @click="onLogoClick">
             <div class="space"></div>
             <img id="exchange-language" :src="getImageImport(isZh ? 'language_zh.png' : 'language_en.png')" @click="onExchangeLanguageClick" alt="切换语言">
             <div v-if="props.showAboutUs" class="join-us" @click="onJoinUsClick">{{ t('common.aboutUs')  }}</div>

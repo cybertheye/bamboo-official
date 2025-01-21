@@ -31,7 +31,7 @@
         </div>
 
         <div class="product-img-container">
-            <img class="product-img" src="../assets/images/products/main_product.png" alt="主图">
+            <img class="product-img" src="../assets/images/products/main_product.png" alt="fan bearing housing">
         </div>
 
     </div>

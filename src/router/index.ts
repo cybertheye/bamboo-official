@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory, type RouteRecordRaw } from 'vue-router'
+import { createRouter,createWebHistory, createWebHashHistory, type RouteRecordRaw } from 'vue-router'
 import { type RouterOptions } from 'vue-router'
 
 import HomePage from '@/views/CompanyHome/CompanyHome.vue';

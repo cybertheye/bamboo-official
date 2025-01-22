@@ -135,12 +135,13 @@ function scrollToElement(text: string) {
   width: 100%;
   height: 100vh;
   overflow: auto;
-  background-color: #f9f9f9;
-  font-family: 'Arial', sans-serif;
+
+
 
   .quote-content-wrapper {
-    padding: 20px;
-    padding-top: 100px;
+
+      padding-top: 100px;
+      padding-bottom: 20px;
 
     .loading {
       text-align: center;
@@ -223,7 +224,7 @@ function scrollToElement(text: string) {
         max-width: 100%;
         height: auto;
         display: block;
-        margin: 1.5rem auto;
+          margin: 1.5rem auto;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease;
@@ -261,20 +262,54 @@ function scrollToElement(text: string) {
         font-size: 0.9em;
         color: #e74c3c;
       }
+	:deep(em){
+	    color:red;
+	}
+	:deep(table) {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+            display: block;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
 
-      pre {
-        background-color: #2c3e50;
-        padding: 1rem;
-        border-radius: 8px;
-        overflow-x: auto;
-        margin: 1.5rem 0;
+            th, td {
+		padding: 12px 15px;
+		text-align: center;
+		vertical-align: middle;
+		border: 1px solid #ddd;
+            }
 
-        code {
-          background-color: transparent;
-          padding: 0;
-          color: #ecf0f1;
-        }
-      }
+            th {
+		background-color: #f5f5f5;
+		font-weight: 600;
+		border: 1px solid #ddd;
+            }
+
+            tr:nth-child(even) {
+		background-color: #f9f9f9;
+            }
+
+            tr:hover {
+		background-color: #f1f1f1;
+            }
+	}
+
+	pre {
+            background-color: #f5f5f5;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border: 1px solid #ddd;
+
+            code {
+		background-color: transparent;
+		padding: 0;
+		color: #333;
+            }
+	}
 
       a {
         color: #3498db;

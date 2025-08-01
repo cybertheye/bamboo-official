@@ -15,7 +15,7 @@ fi
 
 echo "Stopping follow containers:"
 docker stop $CONTAINERS
-
+docker container prune
 
 # 输出结果
 if [ $? -eq 0 ]; then

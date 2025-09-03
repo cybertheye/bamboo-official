@@ -17,7 +17,7 @@ banboX ltd.
 | No. | Model               | Shaft Diameter | Bearing | Net Weight |
 |-----|---------------------|----------------|---------|------------|
 | 1   | H-80 oil-lubricated | 28 mm          | 6308    | 18 kg      |
-| 2   | H-80 water-cooled   | 38 mm          | 6309    | 20 kg      |
+| 2   | H-80 oil-lubricated | 38 mm          | 6309    | 20 kg      |
 | 3   | H-100 water-cooled  | 28 mm          | 6308    | 20 kg      |
 | 4   | H-115 water-cooled  | 38 mm          | 6310    | 32 kg      |
 | 5   | H-140 water-cooled  | 42 mm          | 6312    | 48 kg      |

@@ -14,7 +14,7 @@ coverage
 *.local
 components.d.ts
 /data/
-
+/public/video/
 /cypress/videos/
 /cypress/screenshots/
 

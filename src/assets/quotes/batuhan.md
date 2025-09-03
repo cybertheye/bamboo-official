@@ -111,4 +111,4 @@ You can find our company profile in our [Website - about us](https://www.fanbear
 email: sales.lucy@fanbearinghousing.com
 
 Whatsapp:
-![whatsapp](/Users/mmmmmcclxxvii/Develop/web/project/unicorn_factory/public/images/contact/cyven-whatsapp.JPG)
+<img src="/images/contact/lucy-whatsapp.jpg" alt="Lucy" width="50%">
